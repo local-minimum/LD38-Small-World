@@ -60,6 +60,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
     {
         miniGameBG.raycastTarget = false;
         miniGame.raycastTarget = false;
+        
         yield return new WaitForSeconds(easeOutDuration);
         miniGameBG.color = loadedColor;
         miniGame.enabled = false;
@@ -69,13 +70,14 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
 
     IEnumerator<WaitForSeconds> FadeIn()
     {
+        yield return new WaitForSeconds(0.01f);
+        MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
 
         yield return new WaitForSeconds(easeOutDuration);
         miniGameBG.raycastTarget = true;
         miniGame.raycastTarget = true;
         miniGame.enabled = true;
         miniGameBG.color = loadedColor;
-        MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
     }
 
     void Start()
