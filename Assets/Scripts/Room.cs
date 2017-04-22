@@ -15,7 +15,7 @@ public class Room : Singleton<Room> {
     Sprite selfIcon;
 
     [SerializeField]
-    int startLvl = 1;
+    int difficultyLvl = 1;
 
     public ConversationGenerator Conversation
     {
@@ -31,7 +31,7 @@ public class Room : Singleton<Room> {
 
     public void Greet() {
         otherHappy = true;
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), selfIcon, ConversationCallackOther);
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, ConversationCallackOther);
 
     }
 
@@ -42,6 +42,10 @@ public class Room : Singleton<Room> {
             otherHappy = true;
         } else if (_Conversation.currentPerson.dislikes.Contains(response.Category))
         {
+            if (otherHappy)
+            {
+                difficultyLvl++;
+            }
             otherHappy = false;
         }
 
@@ -52,6 +56,7 @@ public class Room : Singleton<Room> {
     public void ResponseSilent()
     {
         otherHappy = false;
+        difficultyLvl++;
         DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, ConversationCallbackMe);
     }
 
@@ -74,6 +79,12 @@ public class Room : Singleton<Room> {
 
     void Start()
     {
+        StartCoroutine(DelayConvo());
+    }
+
+    IEnumerator<WaitForSeconds> DelayConvo()
+    {
+        yield return new WaitForSeconds(2);
         Greet();
     }
 }
