@@ -50,10 +50,14 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         Load(SceneNames[Random.Range(0, SceneNames.Length)]);
     }
 
-    void UnloadCurrent()
+    public void UnloadCurrent()
     {
-        StartCoroutine(FadeOut());
-        SceneManager.UnloadSceneAsync(currentMiniGameScene);
+        if (!string.IsNullOrEmpty(currentMiniGameScene))
+        {
+            StartCoroutine(FadeOut());
+            SceneManager.UnloadSceneAsync(currentMiniGameScene);
+            currentMiniGameScene = null;
+        }
     }
 
     IEnumerator<WaitForSeconds> FadeOut()
