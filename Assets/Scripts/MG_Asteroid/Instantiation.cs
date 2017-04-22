@@ -76,7 +76,7 @@ public class Instantiation : MonoBehaviour {
             if (m_TimeLeft < 0)
             {
                 Debug.Log("Timeout");
-                Room.instance.Response(new ConversationPiece(ConversationCategory.Silent, ConversationQuality.Bad, ""));
+                Room.instance.ResponseSilent();
                 m_Playing = false;
             }
         }
