@@ -4,23 +4,35 @@ using UnityEngine;
 using Rant;
 using Rant.Resources;
 using System.IO;
+using System;
 
 public class ConversationGenerator : MonoBehaviour {
 
 	[SerializeField]
 	public PersonProfile currentPerson;
 
+	private RantEngine rant;
+
+	private Dictionary<ConversationCategory, Dictionary<ConversationQuality, List<RantProgram>>> conversationMap = 
+		new Dictionary<ConversationCategory, Dictionary<ConversationQuality, List<RantProgram>>> ();
+
 	public ConversationPiece GenerateConversation(ConversationQuality quality) {
 		var category = currentPerson.GetRandomCategory (quality);
-		var text = "hello";
-		return new ConversationPiece (category, quality, text);
+		return GenerateConversation (category, quality);
 	}
 
     public ConversationPiece GenerateConversation(ConversationCategory category)
     {
-        var text = "hello";
-        return new ConversationPiece(category, ConversationQuality.Good, text);
+		return GenerateConversation (category, ConversationQuality.Good);
     }
+
+	public ConversationPiece GenerateConversation(ConversationCategory category, ConversationQuality quality) {
+		var list = conversationMap [category] [quality];
+
+		var text = rant.Do(list[UnityEngine.Random.Range(0, list.Count)]);
+
+		return new ConversationPiece (category, quality, text);
+	}
 
     public List<ConversationPiece> GenerateConversations(ConversationQuality quality, int numberOfConversions) {
 		var conversations = new List<ConversationPiece> ();
@@ -32,15 +44,32 @@ public class ConversationGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {		
-		var rant = new RantEngine();
+		rant = new RantEngine();
 		var asset = Resources.Load("Rantionary-3.0.17") as TextAsset;
 		var stream = new MemoryStream(asset.bytes);
 		var package = RantPackage.Load(stream);
 		rant.LoadPackage (package);
-		var pgm = RantProgram.CompileString(@"<name-male> likes to <verb-transitive> <noun.pl> with <pro.dposs-male> pet <noun-animal> on <noun.pl  -dayofweek>.");
-		// Run the program
-		var output = rant.Do(pgm);
-		Debug.Log (output);
+
+		foreach (ConversationCategory category in Enum.GetValues(typeof(ConversationCategory))) {
+			foreach (ConversationQuality quality in Enum.GetValues(typeof(ConversationQuality))) {
+				var resourceName = category.ToString () + "_" + quality.ToString ();
+				var conversations = Resources.Load (resourceName) as TextAsset;
+				List<RantProgram> lines = new List<RantProgram> ();
+				using (StringReader sr = new StringReader(conversations.text)) {
+					string line;
+					while ((line = sr.ReadLine()) != null) {
+						lines.Add (RantProgram.CompileString(line));
+					}
+				}
+				if (!conversationMap.ContainsKey (category)) {
+					conversationMap.Add (category, new Dictionary<ConversationQuality, List<RantProgram>> ());
+				}
+				var qualityDict = conversationMap [category];
+				qualityDict.Add (quality, lines);
+
+				Debug.Log (GenerateConversation (category, quality).Text);
+			}
+		}
 	}
 	
 	// Update is called once per frame
