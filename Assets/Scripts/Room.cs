@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using LocalMinimum;
+using UnityEngine.SceneManagement;
 
 public class Room : Singleton<Room> {
 
@@ -141,8 +142,16 @@ public class Room : Singleton<Room> {
             MiniGameLoader.instance.LoadRandom();
         } else
         {
-            Debug.Log("Here's loading transition to next room");
+            RoomOutro.instance.ShowOutro(LoadNextRoomScene);
         }
+    }
+
+    [SerializeField]
+    string nextScene;
+
+    void LoadNextRoomScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
     void Start()
