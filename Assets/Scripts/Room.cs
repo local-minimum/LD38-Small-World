@@ -27,19 +27,28 @@ public class Room : Singleton<Room> {
     [SerializeField]
     int convoPieces = 4;
 
+    [SerializeField]
+    int otherPiecesThisTurn = 1;
+
     bool otherHappy;
 
     public void Greet() {
         otherHappy = true;
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, ConversationCallackOther);
+        frenemyCat = ConversationCategory.Greeting;
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, ConversationCallbackMe);
 
     }
 
+    ConversationCategory frenemyCat = ConversationCategory.Greeting;
+    ConversationCategory playerCat = ConversationCategory.Silent;
+
     public void Response(ConversationPiece response)
     {
+        playerCat = response.Category;
         if (_Conversation.currentPerson.likes.Contains(response.Category))
         {
             otherHappy = true;
+            otherPiecesThisTurn = 1;
         } else if (_Conversation.currentPerson.dislikes.Contains(response.Category))
         {
             if (otherHappy)
@@ -47,6 +56,7 @@ public class Room : Singleton<Room> {
                 difficultyLvl++;
             }
             otherHappy = false;
+            otherPiecesThisTurn = 2;
         }
 
         DialogueDisplayer.instance.ShowDialogue(response, selfIcon, ConversationCallbackMe);
@@ -57,12 +67,38 @@ public class Room : Singleton<Room> {
     {
         otherHappy = false;
         difficultyLvl++;
+        playerCat = frenemyCat;
+        otherPiecesThisTurn = Random.Range(2, 5);
         DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, ConversationCallbackMe);
     }
 
     void ConversationCallbackMe()
     {
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(otherHappy ? ConversationQuality.Good : ConversationQuality.Bad), _Conversation.currentPerson.icon, ConversationCallackOther);
+        ConversationPiece piece;
+        otherPiecesThisTurn--;
+        if (otherPiecesThisTurn > 0)
+        {
+
+            if (!otherHappy)
+            {
+                piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
+                otherHappy = false;
+            } else if (playerCat == frenemyCat)
+            {
+                piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Good);
+            } else
+            {
+                piece = _Conversation.GenerateConversation(ConversationQuality.Good);
+            }
+            frenemyCat = piece.Category;
+            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, ConversationCallbackMe);
+            
+        }
+        else {
+            piece = _Conversation.GenerateConversation(ConversationQuality.Good);
+            frenemyCat = piece.Category;
+            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, ConversationCallackOther);
+        }
     }
 
     void ConversationCallackOther()
