@@ -15,13 +15,6 @@ public class ScreenWrapHandler : MonoBehaviour {
     void Start()
     {
         m_Renderers = GetComponentsInChildren<Renderer>();
-
-        var cam = Camera.main;
-        var screenBottomLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, transform.position.z));
-        var screenTopRight = cam.ViewportToWorldPoint(new Vector3(1, 1, transform.position.z));
-
-        m_ScreenWidth = screenTopRight.x - screenBottomLeft.x;
-        m_ScreenHeight = screenTopRight.y - screenBottomLeft.y;
     }
 
     void Update()
