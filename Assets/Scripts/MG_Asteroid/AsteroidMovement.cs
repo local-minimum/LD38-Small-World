@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AsteroidMovement : MonoBehaviour {
 
-    public Vector2 m_Speed = new Vector2(1, 1);
+    public Vector2 m_Speed = new Vector2(20, 20);
     
     private Vector2 m_Direction;
     private Vector2 m_Movement;
@@ -14,6 +14,12 @@ public class AsteroidMovement : MonoBehaviour {
     {
         m_RigidbodyComponent = GetComponent<Rigidbody2D>();
         m_Direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+
+        m_Movement = new Vector2(
+          m_Speed.x * m_Direction.x,
+          m_Speed.y * m_Direction.y);
+
+        m_RigidbodyComponent.velocity = m_Movement;
         /*
         var conversationPiece = GetComponent<MiniGameConversationObject>().m_ConversationPiece;
 
@@ -22,17 +28,5 @@ public class AsteroidMovement : MonoBehaviour {
             var sprite = GetComponentInChildren<Sprite>();
             sprite = DialogueDisplayer.instance.GetSpriteFromCategory(conversationPiece.Category);
         }*/
-    } 
-    
-    void Update()
-    {
-        m_Movement = new Vector2(
-          m_Speed.x * m_Direction.x,
-          m_Speed.y * m_Direction.y);
-    }
-
-    void FixedUpdate()
-    {
-        m_RigidbodyComponent.AddForce(m_Movement);
     }
 }
