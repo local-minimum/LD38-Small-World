@@ -1,1 +1,3 @@
-Food is bad
+That's so unhealty
+That wouldn't work with my <noun.sg> diet.
+Don't talk about that, I'm allergic to <noun.sg>.

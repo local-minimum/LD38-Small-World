@@ -67,7 +67,9 @@ public class ConversationGenerator : MonoBehaviour {
 				var qualityDict = conversationMap [category];
 				qualityDict.Add (quality, lines);
 
-				Debug.Log (GenerateConversation (category, quality).Text);
+				foreach (var line in lines) {
+					Debug.Log (rant.Do (line));
+				}
 			}
 		}
 	}
