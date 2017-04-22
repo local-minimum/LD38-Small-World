@@ -287,7 +287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Difficulty: 3
-  m_SpawnablePrefab: {fileID: 0}
+  m_SpawnablePrefab: {fileID: 50362534300009688, guid: a5a5e8066a36bb34bb0086bdc354d7d2,
+    type: 2}
 --- !u!114 &1332160798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f39b17c21bf44d5ac5d4a3153ee814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPerson: {fileID: 0}
+  currentPerson: {fileID: 1332160798}
 --- !u!1001 &1413374413
 Prefab:
   m_ObjectHideFlags: 0
