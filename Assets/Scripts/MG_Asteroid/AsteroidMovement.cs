@@ -14,6 +14,14 @@ public class AsteroidMovement : MonoBehaviour {
     {
         m_RigidbodyComponent = GetComponent<Rigidbody2D>();
         m_Direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        /*
+        var conversationPiece = GetComponent<MiniGameConversationObject>().m_ConversationPiece;
+
+        if (conversationPiece != null)
+        {
+            var sprite = GetComponentInChildren<Sprite>();
+            sprite = DialogueDisplayer.instance.GetSpriteFromCategory(conversationPiece.Category);
+        }*/
     } 
     
     void Update()
