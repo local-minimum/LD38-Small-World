@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1660933218312080}
+  m_IsPrefabParent: 1
+--- !u!1 &1660933218312080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4246687142546744}
+  - component: {fileID: 114128055888090076}
+  - component: {fileID: 114641576737558768}
+  - component: {fileID: 114041661722775618}
+  - component: {fileID: 114419191016538332}
+  - component: {fileID: 114345427927047720}
+  m_Layer: 0
+  m_Name: Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4246687142546744
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 292, y: 164.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114041661722775618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f39b17c21bf44d5ac5d4a3153ee814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPerson: {fileID: 114419191016538332}
+--- !u!114 &114128055888090076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958c896de3d08c44692634307f391f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneNames:
+  - SigridDevScene
+  miniGameBG: {fileID: 0}
+  miniGame: {fileID: 0}
+  easeOut:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  easeOutDuration: 0.1
+  roomCamera: {fileID: 0}
+--- !u!114 &114345427927047720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dbf5e31c0c2e343a5967248c12c237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outro: {fileID: 0}
+--- !u!114 &114419191016538332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9388604c4d32b47e48b71074816b6189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 0600000003000000
+  dislikes: 020000000400000001000000
+  icon: {fileID: 21300000, guid: be4b8619363a71c4c98d6be059504a08, type: 3}
+--- !u!114 &114641576737558768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660933218312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df01362ca8362949a39102199b29e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Conversation: {fileID: 114041661722775618}
+  selfIcon: {fileID: 21300000, guid: f3ceb37c02e4ad145a2c3d77d9ae7aee, type: 3}
+  difficultyLvl: 1
+  convoPieces: 2
+  otherPiecesThisTurn: 1
+  nextScene: SigridDevScene
+  delayBeforeProfile: 0.5
+  delayBeforeGreet: 2
+  delayBeforeHide: 5
