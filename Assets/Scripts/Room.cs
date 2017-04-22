@@ -120,12 +120,22 @@ public class Room : Singleton<Room> {
         StartCoroutine(DelayConvo());
     }
 
+    [SerializeField]
+    float delayBeforeProfile = 0.5f;
+
+    [SerializeField]
+    float delayBeforeGreet = 2f;
+
+    [SerializeField]
+    float delayBeforeHide = 10f;
+
     IEnumerator<WaitForSeconds> DelayConvo()
     {
+        yield return new WaitForSeconds(delayBeforeProfile);
         ProfileViewer.instance.ShowProfile(_Conversation.currentPerson);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(delayBeforeGreet);
         Greet();
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(delayBeforeHide);
         ProfileViewer.instance.HideProfile();
     }
 }
