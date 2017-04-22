@@ -9,5 +9,7 @@ public enum ConversationCategory {
 	Family,
 	Nostalgy,
 	Politics,
-	Food
+	Food,
+	Silent,
+	Greeting
 }
