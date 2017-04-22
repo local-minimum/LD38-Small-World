@@ -7,4 +7,5 @@ using UnityEngine.SceneManagement;
 public class MiniGameCam : Singleton<MiniGameCam> {
 
     public Camera SceneCamera;
+    
 }
