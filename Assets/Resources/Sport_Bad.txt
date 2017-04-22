@@ -1,1 +1,3 @@
-I have sports
+I don't like sports
+I hate <activity-sport>
+Why would anyone ever watch <activity-sport>
