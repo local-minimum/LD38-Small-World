@@ -17,6 +17,8 @@ public class Room : Singleton<Room> {
 
     public void Response(ConversationPiece response)
     {
+        DialogueDisplayer.instance.ShowDialogue(response, _Conversation.currentPerson.icon, ConversationCallback);
+
         //TODO: Do UI stuff
         //Ask if next scene
     }
@@ -25,5 +27,10 @@ public class Room : Singleton<Room> {
     {
         //TODO: Do UI stuff
         //Ask if next scene
+    }
+
+    void ConversationCallback()
+    {
+
     }
 }

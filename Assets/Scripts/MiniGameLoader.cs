@@ -91,6 +91,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         miniGame.raycastTarget = false;
         miniGame.enabled = false;
 
+        miniGameBG.gameObject.SetActive(true);
 
         //Sprite rendSprite = Sprite.Create(rendTexture, new Rect(0, 0, rendTexture.width, rendTexture.height), Vector2.one * 0.5f);
         miniGame.material.mainTexture = rendTexture;
