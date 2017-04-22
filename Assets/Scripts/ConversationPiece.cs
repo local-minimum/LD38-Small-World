@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Conversation {
+public class ConversationPiece {
 
 	private readonly ConversationCategory category;
 	private readonly ConversationQuality quality;
 	private readonly string text;
 
-	public Conversation(ConversationCategory category, ConversationQuality quality, string text) {
+	public ConversationPiece(ConversationCategory category, ConversationQuality quality, string text) {
 		this.category = category;
 		this.quality = quality;
 		this.text = text;

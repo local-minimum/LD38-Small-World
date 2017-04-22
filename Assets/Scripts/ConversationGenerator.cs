@@ -7,14 +7,14 @@ public class ConversationGenerator : MonoBehaviour {
 	[SerializeField]
 	public PersonProfile currentPerson;
 
-	public Conversation GenerateConversation(ConversationQuality quality) {
+	public ConversationPiece GenerateConversation(ConversationQuality quality) {
 		var category = currentPerson.GetRandomCategory (quality);
 		var text = "hello";
-		return new Conversation (category, quality, text);
+		return new ConversationPiece (category, quality, text);
 	}
 
-	public List<Conversation> GenerateConversations(ConversationQuality quality, int numberOfConversions) {
-		var conversations = new List<Conversation> ();
+	public List<ConversationPiece> GenerateConversations(ConversationQuality quality, int numberOfConversions) {
+		var conversations = new List<ConversationPiece> ();
 		for (int i = 0; i < numberOfConversions; ++i) {
 			conversations.Add(GenerateConversation(quality));
 		}
