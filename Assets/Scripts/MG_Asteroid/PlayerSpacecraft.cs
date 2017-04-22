@@ -10,11 +10,15 @@ public class PlayerSpacecraft : MonoBehaviour
         float translation = Input.GetAxis("Vertical") * m_Speed;
         float rotation = Input.GetAxis("Horizontal") * m_RotationSpeed;
 
-        translation *= Time.deltaTime;
-        rotation *= Time.deltaTime;
-        
-        transform.Translate(translation, 0, 0);
+        if (translation > 0)
+        {
+            translation *= Time.deltaTime;
+            transform.Translate(translation, 0, 0);
+        }     
+
+        rotation *= Time.deltaTime;        
         transform.Rotate(0, 0, rotation);
+
     }
 }
 
