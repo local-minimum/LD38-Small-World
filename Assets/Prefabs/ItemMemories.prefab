@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224540170083577288}
   - component: {fileID: 114368082134479866}
+  - component: {fileID: 114542157138108132}
   m_Layer: 5
   m_Name: ItemMemories
   m_TagString: Untagged
@@ -105,6 +106,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b1cc883d7ed9545b0c8c13e7e22dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114542157138108132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1121293771460038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
 --- !u!114 &114870354468430946
 MonoBehaviour:
   m_ObjectHideFlags: 1

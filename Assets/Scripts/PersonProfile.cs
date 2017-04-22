@@ -20,7 +20,19 @@ public class PersonProfile : MonoBehaviour {
 		throw new UnityException ("Incorrect quality.");
 	}
 
-    
+    public string FullName
+    {
+        get { return "Hello Kitty"; }
+    }
+
+    public string CommonHistory {
+
+        get
+        {
+            return "Sat behind you in history class in 4th and 5th grade.";
+        }
+    }
+
     public Sprite icon;
 
 	// Use this for initialization

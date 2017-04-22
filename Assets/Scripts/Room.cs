@@ -67,6 +67,8 @@ public class Room : Singleton<Room> {
 
     void ConversationCallackOther()
     {
+        ProfileViewer.instance.HideProfile();
+
         convoPieces--;
         if (convoPieces > 0)
         {
@@ -84,7 +86,10 @@ public class Room : Singleton<Room> {
 
     IEnumerator<WaitForSeconds> DelayConvo()
     {
+        ProfileViewer.instance.ShowProfile(_Conversation.currentPerson);
         yield return new WaitForSeconds(2);
         Greet();
+        yield return new WaitForSeconds(10);
+        ProfileViewer.instance.HideProfile();
     }
 }
