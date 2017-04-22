@@ -63,7 +63,7 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
     Sprite workSprite;
 
 
-    Sprite GetSpriteFromCategory(ConversationCategory category)
+    public Sprite GetSpriteFromCategory(ConversationCategory category)
     {
         switch (category)
         {
