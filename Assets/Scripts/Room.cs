@@ -8,6 +8,12 @@ public class Room : Singleton<Room> {
     [SerializeField]
     ConversationGenerator _Conversation;
 
+    [SerializeField]
+    ConversationPiece silentResponse;
+
+    [SerializeField]
+    Sprite selfIcon;
+
     public ConversationGenerator Conversation
     {
         get {
@@ -15,22 +21,46 @@ public class Room : Singleton<Room> {
         }
     }
 
+    [SerializeField]
+    int convoPieces = 4;
+
+    bool otherHappy;
+
     public void Response(ConversationPiece response)
     {
-        DialogueDisplayer.instance.ShowDialogue(response, _Conversation.currentPerson.icon, ConversationCallback);
+        if (_Conversation.currentPerson.likes.Contains(response.Category))
+        {
+            otherHappy = true;
+        } else if (_Conversation.currentPerson.dislikes.Contains(response.Category))
+        {
+            otherHappy = false;
+        }
 
-        //TODO: Do UI stuff
-        //Ask if next scene
+        DialogueDisplayer.instance.ShowDialogue(response, selfIcon, ConversationCallbackMe);
+
     }
 
     public void ResponseSilent()
     {
-        //TODO: Do UI stuff
-        //Ask if next scene
+        otherHappy = false;
+        DialogueDisplayer.instance.ShowDialogue(silentResponse, selfIcon, ConversationCallbackMe);
+
     }
 
-    void ConversationCallback()
+    void ConversationCallbackMe()
     {
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(otherHappy ? ConversationQuality.Good : ConversationQuality.Bad), _Conversation.currentPerson.icon, ConversationCallackOther);
+    }
 
+    void ConversationCallackOther()
+    {
+        convoPieces--;
+        if (convoPieces > 0)
+        {
+            MiniGameLoader.instance.LoadRandom();
+        } else
+        {
+            Debug.Log("Here's loading transition to next room");
+        }
     }
 }

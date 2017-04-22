@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class ConversationPiece {
 
+    [SerializeField]
 	private readonly ConversationCategory category;
-	private readonly ConversationQuality quality;
-	private readonly string text;
+
+    [SerializeField]
+    private readonly ConversationQuality quality;
+
+    [SerializeField]
+    private readonly string text;
 
 	public ConversationPiece(ConversationCategory category, ConversationQuality quality, string text) {
 		this.category = category;

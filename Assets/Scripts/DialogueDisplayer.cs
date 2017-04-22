@@ -21,13 +21,24 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
 
     Action _callback;
 
+    bool displaying = false;
+
     public void ShowDialogue(ConversationPiece piece, Sprite icon, Action callback)
     {
         iconImage.sprite = icon;
         dialogueText.text = piece.Text;
-        contentType.sprite = GetSpriteFromCategory(piece.Category);
+
+        if (piece.Category == ConversationCategory.Slient)
+        {
+            contentType.enabled = false;
+        }
+        else {
+            contentType.sprite = GetSpriteFromCategory(piece.Category);
+            contentType.enabled = true;
+        }
         _callback = callback;
         dialogueParent.SetActive(true);
+        displaying = true;
     }
 
     [SerializeField]
@@ -40,11 +51,26 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
 
     public void Continue()
     {
-        dialogueParent.SetActive(false);
-        if (_callback != null)
+        if (displaying)
         {
-            _callback();
+            displaying = false;
+            dialogueParent.SetActive(false);
+            if (_callback != null)
+            {
+                _callback();
+            }
         }
     }
     
+    void Update()
+    {
+        if (displaying)
+        {
+            if (Input.GetButtonDown("Submit"))
+            {
+                Continue();
+            }
+        }
+    }
+
 }
