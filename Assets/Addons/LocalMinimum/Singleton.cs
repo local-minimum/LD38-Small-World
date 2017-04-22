@@ -28,6 +28,14 @@ namespace LocalMinimum
 
         }
 
+        public static bool IsInstanciated {
+
+            get
+            {
+                return _instance != null;
+            }
+        }
+
         static void SetInstance(T instance)
         {
             _instance = instance;
