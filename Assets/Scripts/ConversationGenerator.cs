@@ -16,7 +16,13 @@ public class ConversationGenerator : MonoBehaviour {
 		return new ConversationPiece (category, quality, text);
 	}
 
-	public List<ConversationPiece> GenerateConversations(ConversationQuality quality, int numberOfConversions) {
+    public ConversationPiece GenerateConversation(ConversationCategory category)
+    {
+        var text = "hello";
+        return new ConversationPiece(category, ConversationQuality.Good, text);
+    }
+
+    public List<ConversationPiece> GenerateConversations(ConversationQuality quality, int numberOfConversions) {
 		var conversations = new List<ConversationPiece> ();
 		for (int i = 0; i < numberOfConversions; ++i) {
 			conversations.Add(GenerateConversation(quality));

@@ -14,6 +14,9 @@ public class Room : Singleton<Room> {
     [SerializeField]
     Sprite selfIcon;
 
+    [SerializeField]
+    int startLvl = 1;
+
     public ConversationGenerator Conversation
     {
         get {
@@ -25,6 +28,12 @@ public class Room : Singleton<Room> {
     int convoPieces = 4;
 
     bool otherHappy;
+
+    public void Greet() {
+        otherHappy = true;
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), selfIcon, ConversationCallackOther);
+
+    }
 
     public void Response(ConversationPiece response)
     {
@@ -43,8 +52,7 @@ public class Room : Singleton<Room> {
     public void ResponseSilent()
     {
         otherHappy = false;
-        DialogueDisplayer.instance.ShowDialogue(silentResponse, selfIcon, ConversationCallbackMe);
-
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, ConversationCallbackMe);
     }
 
     void ConversationCallbackMe()
@@ -62,5 +70,10 @@ public class Room : Singleton<Room> {
         {
             Debug.Log("Here's loading transition to next room");
         }
+    }
+
+    void Start()
+    {
+        Greet();
     }
 }

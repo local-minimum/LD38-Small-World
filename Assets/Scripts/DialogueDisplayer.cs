@@ -28,7 +28,7 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
         iconImage.sprite = icon;
         dialogueText.text = piece.Text;
 
-        if (piece.Category == ConversationCategory.Slient)
+        if (piece.Category == ConversationCategory.Silent || piece.Category == ConversationCategory.Greeting)
         {
             contentType.enabled = false;
         }
