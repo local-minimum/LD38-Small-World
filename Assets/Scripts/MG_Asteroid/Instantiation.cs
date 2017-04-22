@@ -11,7 +11,11 @@ public class Instantiation : MonoBehaviour {
 
     private void Start()
     {
-        m_ConvGenerator = Room.instance.Conversation;
+        if (Room.IsInstanciated)
+        {
+            m_ConvGenerator = Room.instance.Conversation;
+        }
+        
         if (m_ConvGenerator == null)
         {
             m_ConvGenerator = GetComponent<ConversationGenerator>();
@@ -27,13 +31,12 @@ public class Instantiation : MonoBehaviour {
     }
 
     public void Play()
-    {        
+    {
         int goodConvCount = 3;
         int badConvCount = 7;
-        
-        
-        var goodConversations = Room.instance.Conversation.GenerateConversations(ConversationQuality.Good, goodConvCount);
-        var badConversations = Room.instance.Conversation.GenerateConversations(ConversationQuality.Bad, badConvCount);
+                
+        var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
+        var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, badConvCount);
         
         foreach (var conversationPiece in goodConversations)
         {
