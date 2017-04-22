@@ -1,0 +1,2 @@
+<timeadv-time-past> a <noun> was much better than it is today
+Do you remember when we <verb> the <noun> together?

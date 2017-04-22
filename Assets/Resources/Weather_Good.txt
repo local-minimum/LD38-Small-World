@@ -1,0 +1,4 @@
+The weather is <adj-weather> today isn't it?
+Nice weather isn't it?
+It's <adj-weather> outside today.
+I hate when it is <adj-weather> outside.

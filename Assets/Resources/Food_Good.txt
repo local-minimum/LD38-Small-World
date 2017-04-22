@@ -1,0 +1,9 @@
+I love <noun.pl-food>!
+Isn't <noun.pl-food> the best!
+I'm on this new <noun>-diet, all I eat is <adj> <noun.pl-food>.
+Would you like to come to dinner and eat some <noun.pl-food>?
+Right now I'm starving for some <noun.sg-food>.
+Right now I'm starving for some <adj> <noun.sg-food>.
+My favorite dish is <noun-food> <noun.pl-food>!
+Have you been to this new cafe that serves <noun.pl-food> out of <noun.pl>?
+I love <noun.sg-food> beer!

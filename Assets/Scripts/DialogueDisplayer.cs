@@ -42,11 +42,48 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
     }
 
     [SerializeField]
-    Sprite[] categories;
+    Sprite familySprite;
 
-    Sprite GetSpriteFromCategory(ConversationCategory category)
+    [SerializeField]
+    Sprite foodSprite;
+
+    [SerializeField]
+    Sprite memorySprite;
+
+    [SerializeField]
+    Sprite sportsSprite;
+
+    [SerializeField]
+    Sprite politicsSprite;
+
+    [SerializeField]
+    Sprite weatherSprite;
+
+    [SerializeField]
+    Sprite workSprite;
+
+
+    public Sprite GetSpriteFromCategory(ConversationCategory category)
     {
-        return categories[(int)category];
+        switch (category)
+        {
+            case ConversationCategory.Family:
+                return familySprite;
+            case ConversationCategory.Food:
+                return foodSprite;
+            case ConversationCategory.Nostalgy:
+                return memorySprite;
+            case ConversationCategory.Politics:
+                return politicsSprite;
+            case ConversationCategory.Sport:
+                return sportsSprite;
+            case ConversationCategory.Weather:
+                return weatherSprite;
+            case ConversationCategory.Work:
+                return workSprite;
+            default:
+                return null;
+        }
     }
 
     public void Continue()

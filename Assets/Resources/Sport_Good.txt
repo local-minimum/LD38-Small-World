@@ -1,0 +1,4 @@
+Do you like to play <activity-sport>?
+I love to watch a good game of <activity-sport>.
+Playing <activity-sport> is <adj-cp1>
+I feel <adj-emotion> when watching a game of <activity-sport>!
