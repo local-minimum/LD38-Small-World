@@ -20,6 +20,9 @@ public class PersonProfile : MonoBehaviour {
 		throw new UnityException ("Incorrect quality.");
 	}
 
+    
+    public Sprite icon;
+
 	// Use this for initialization
 	void Start () {
 		
