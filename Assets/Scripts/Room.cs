@@ -18,6 +18,14 @@ public class Room : Singleton<Room> {
     [SerializeField]
     int difficultyLvl = 1;
 
+    public int Difficulty
+    {
+        get
+        {
+            return difficultyLvl;
+        }
+    }
+
     public ConversationGenerator Conversation
     {
         get {

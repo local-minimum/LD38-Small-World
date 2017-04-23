@@ -107,6 +107,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         miniGame.raycastTarget = true;
         miniGame.enabled = true;
         miniGameBG.color = loadedColor;
+        MiniGamePlayerBase.instance.Play(Room.instance.Difficulty);
     }
 
     void Start()

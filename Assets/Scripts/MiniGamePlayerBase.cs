@@ -37,7 +37,7 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
         if (m_ConvGenerator == null)
         {
             m_ConvGenerator = GetComponent<ConversationGenerator>();
-            StartCoroutine(DelayPlay());
+            //StartCoroutine(DelayPlay());
         }
        
     }

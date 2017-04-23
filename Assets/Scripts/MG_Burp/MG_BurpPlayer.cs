@@ -10,6 +10,7 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
 
     public override void Play(int difficulty)
     {
+        Debug.Log("Play " + m_ConvGenerator);
         int goodConvCount = 2;
         int badConvCount = 4;
 
