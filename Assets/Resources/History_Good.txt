@@ -2,5 +2,6 @@
 <name-female> <surname> | You met [num: 2; 20] years ago when you both worked at the <noun.sg> factory.
 <name-female> <surname> | You used to go <verb.ing> together.
 <name-female> <surname> | A friend of your sister <name-female>.
-<name-female> <surname> | A relative of some sort, you forget how.
+<name-female> <surname> | A friend of your ex, <name>, that you don't want to be reminded of.
+<name-female> <surname> | You are related in some way, you forget how.
 <name-female> <surname> | You are neighbours and they often come to borrow your <noun.sg>.
