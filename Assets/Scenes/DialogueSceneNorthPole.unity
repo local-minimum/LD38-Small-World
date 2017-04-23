@@ -353,6 +353,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114128055888090076, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: SceneNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4246687142546744, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
       propertyPath: m_LocalPosition.x
       value: 692
@@ -409,8 +414,13 @@ Prefab:
         type: 2}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 21300000, guid: 8f706d94c8ff22c4e99632079d8c15ed,
+      objectReference: {fileID: 21300000, guid: b8e051096a0c6b8449150617eff8f2f1,
         type: 3}
+    - target: {fileID: 114128055888090076, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: SceneNames.Array.data[1]
+      value: MGAsteroid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
   m_IsPrefabParent: 0

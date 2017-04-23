@@ -27,7 +27,8 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         int badConvCount = 5;
                 
         var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
-        var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, badConvCount);
+        var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, ConversationQuality.Good, badConvCount);
+
 
         m_TimeLeft = m_Timeout;
 
