@@ -2,5 +2,5 @@ I have no family.
 I haven't spoken to my family for years.
 My family is dead to me.
 How dare you bring that up!?
-I lost my family in a <adj> <noun.sg> accident only [num: 2;12] months ago.
-I lost my family in a <adj> <noun.sg> accident only [num: 40;60] months ago.
+I lost my family in \a <adj> <noun.sg> accident only [num: 2;12] months ago.
+I lost my family in \a <adj> <noun.sg> accident only [num: 40;60] months ago.
