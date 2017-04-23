@@ -1,2 +1,4 @@
-<timeadv-time-past> a <noun> was much better than it is today
-Do you remember when we <verb> the <noun> together?
+<timeadv-time-past> \a <noun> was much better than it is today, don't you think?
+When we were kids, the <noun.pl> really were something else.
+Do you remember when we <verb.ed> the <noun> together?
+Remember that summer when <name> and you went <verb.ing>?

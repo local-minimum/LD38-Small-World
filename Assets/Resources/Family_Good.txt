@@ -1,8 +1,8 @@
-My youngest child is [num: 1; 10] years old
-My oldest child is [num: 1; 10] years old
+My youngest child is now [num: 1; 10] years old
+My oldest child is now [num: 1; 10] years old
 My child is [num: 1; 50] months old
-My daughter <name-female> won the championship in <verb>
-My child <name> crafted this <adj> <noun.sg> out of <noun.pl>
-Did you know that <name> and <name> got their [num: 1;10] baby, I don't understand how they can keep it up
-Have you heard about <name-female>, apparently she <verb> nowadays?
-Have you heard about <name-male>, apparently he <verb> nowadays?
+My daughter <name-female> won the regional championship in <verb.ing>
+My child <name> crafted a <adj> <noun.sg> out of <noun.pl>. Do you want to see some pictures?
+Did you know that <name> and <name> got their [num: 1;10] baby, I don't understand how they can keep it up!
+Have you heard about <name-female>, apparently she's <verb.ing> nowadays?
+Have you heard about <name-male>, apparently he's <verb.ing> nowadays?

@@ -20,13 +20,5 @@ public class AsteroidMovement : MonoBehaviour {
           m_Speed.y * m_Direction.y);
 
         m_RigidbodyComponent.velocity = m_Movement;
-        /*
-        var conversationPiece = GetComponent<MiniGameConversationObject>().m_ConversationPiece;
-
-        if (conversationPiece != null)
-        {
-            var sprite = GetComponentInChildren<Sprite>();
-            sprite = DialogueDisplayer.instance.GetSpriteFromCategory(conversationPiece.Category);
-        }*/
     }
 }
