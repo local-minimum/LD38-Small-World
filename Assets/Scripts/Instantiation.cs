@@ -57,7 +57,7 @@ public class Instantiation : MonoBehaviour {
     }
 
     [SerializeField]
-    Transform Asteroids;
+    Transform SpawnParent;
     
     private void SpawnObject(ConversationPiece conversationPiece)
     {
@@ -65,7 +65,7 @@ public class Instantiation : MonoBehaviour {
         Rigidbody2D prefabClone = (Rigidbody2D)Instantiate(m_SpawnablePrefab, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
-        prefabClone.transform.SetParent(Asteroids);
+        prefabClone.transform.SetParent(SpawnParent);
     }
 
     public void Update()
