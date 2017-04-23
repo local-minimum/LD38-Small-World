@@ -224,8 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bd99313ddb1424ba5d153e82075cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Asteroid: {fileID: 50362534300009688, guid: a5a5e8066a36bb34bb0086bdc354d7d2,
-    type: 2}
+  m_Asteroid: {fileID: 0}
   m_Player: {fileID: 50358837822338718, guid: c95652175975ba743891960969822a13, type: 2}
   m_Timeout: 5
   Asteroids: {fileID: 1817998722}
