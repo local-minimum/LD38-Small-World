@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnParent: {fileID: 340262367}
-  m_Timeout: 5
+  m_Timeout: 7
   spawnFreq: 0.4
   family: {fileID: 114770362363113994, guid: 532c67230fa04be46b16edcce9f03938, type: 2}
   food: {fileID: 114699113910157004, guid: 414afc572e20d654ea5fa780a8e4a532, type: 2}

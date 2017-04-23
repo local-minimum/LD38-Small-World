@@ -63,6 +63,8 @@ public class MG_BurpSelector : Singleton<MG_BurpItem> {
             otherT.localScale = Vector2.one * Mathf.Lerp(startSize, targetSize, progress);
             yield return new WaitForSeconds(0.016f);
         }
+
+        (MiniGamePlayerBase.instance as MG_BurpPlayer).EndGame();
     }
 
 
