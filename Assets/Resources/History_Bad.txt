@@ -1,0 +1,6 @@
+Name: <name-male> <surname> | You met [num: 2; 20] years ago in school.
+Name: <name-male> <surname> | You met [num: 2; 20] years ago when you both worked at the <noun.sg> factory.
+Name: <name-male> <surname> | You used to go <verb.ing> together.
+Name: <name-male> <surname> | A friend of your sister <name-female>.
+Name: <name-male> <surname> | A relative of some sort, you forget how.
+Name: <name-male> <surname> | You are neighbours and they often come to borrow your <noun.sg>.
