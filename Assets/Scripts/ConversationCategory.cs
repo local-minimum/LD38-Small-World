@@ -11,5 +11,6 @@ public enum ConversationCategory {
 	Politics,
 	Food,
 	Silent,
-	Greeting
+	Greeting,
+    History
 }

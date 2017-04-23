@@ -356,7 +356,7 @@ Prefab:
     - target: {fileID: 114128055888090076, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
         type: 2}
       propertyPath: SceneNames.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4246687142546744, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -425,6 +425,11 @@ Prefab:
         type: 2}
       propertyPath: SceneNames.Array.data[1]
       value: MGAsteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 114128055888090076, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: SceneNames.Array.data[2]
+      value: MG_Bucket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
