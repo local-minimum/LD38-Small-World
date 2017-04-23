@@ -21,6 +21,12 @@ public class ConversationGenerator : MonoBehaviour {
 		return GenerateConversation (category, quality);
 	}
 
+    public ConversationPiece GenerateConversation(ConversationQuality qualityCategory, ConversationQuality asQuality)
+    {
+        var category = currentPerson.GetRandomCategory(qualityCategory);
+        return GenerateConversation(category, asQuality);
+    }
+
     public ConversationPiece GenerateConversation(ConversationCategory category)
     {
 		return GenerateConversation (category, ConversationQuality.Good);
@@ -42,8 +48,28 @@ public class ConversationGenerator : MonoBehaviour {
 		return conversations;
 	}
 
-	// Use this for initialization
-	void Start () {		
+    public List<ConversationPiece> GenerateConversations(ConversationQuality quality, ConversationQuality asQuality, int numberOfConversions)
+    {
+        var conversations = new List<ConversationPiece>();
+        for (int i = 0; i < numberOfConversions; ++i)
+        {
+            conversations.Add(GenerateConversation(quality, asQuality));
+        }
+        return conversations;
+    }
+
+    public List<ConversationPiece> GenerateConversationsAsGood(ConversationQuality quality, int numberOfConversions)
+    {
+        var conversations = new List<ConversationPiece>();
+        for (int i = 0; i < numberOfConversions; ++i)
+        {
+            conversations.Add(GenerateConversation(quality, ConversationQuality.Good));
+        }
+        return conversations;
+    }
+
+    // Use this for initialization
+    void Start () {		
 		rant = new RantEngine();
 		var asset = Resources.Load("Rantionary-3.0.17") as TextAsset;
 		var stream = new MemoryStream(asset.bytes);
@@ -67,9 +93,10 @@ public class ConversationGenerator : MonoBehaviour {
 				var qualityDict = conversationMap [category];
 				qualityDict.Add (quality, lines);
 
+                /*
 				foreach (var line in lines) {
 					Debug.Log (rant.Do (line));
-				}
+				}*/
 			}
 		}
 	}

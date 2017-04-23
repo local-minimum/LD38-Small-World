@@ -27,8 +27,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="344.75923"
-     inkscape:cy="670.21158"
+     inkscape:cx="759.66181"
+     inkscape:cy="462.26051"
      inkscape:document-units="px"
      inkscape:current-layer="svg8215"
      showgrid="false"
@@ -54,7 +54,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:none">
     <image
        y="29.505056"
        x="44.642872"
@@ -68,13 +68,15 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="byxor"
-     sodipodi:insensitive="true"
      style="display:inline">
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 525.27933,919.52714 3.53553,12.62691 6.06091,16.66752 c 0,0 9.59645,2.52538 10.10153,6.06091 0.50508,3.53554 8.5863,100.51022 8.5863,100.51022 l -323.7539,-3.5356 -1.51522,-64.64973 -5.55584,-10.60661 12.12183,-19.69797 5.55584,-25.75889 z"
        id="path4175"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -82,174 +84,257 @@
      inkscape:label="huvud"
      style="display:inline;opacity:1">
     <ellipse
-       style="opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4247"
        cx="317.82144"
        cy="225.8622"
        rx="8.75"
-       ry="7.5" />
+       ry="7.5"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#c4957b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#c4957b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 444.9722,316.46607 -1.51523,-53.53808 7.07107,3.53553 c 0,0 13.63706,-12.12183 15.15229,-15.15229 1.51522,-3.03045 9.59644,-30.30457 9.59644,-30.30457 l -5.05076,-27.27412 -4.54568,1.01015 c 0,0 5.05076,-39.90102 3.53553,-43.43656 -1.51523,-3.53553 -31.81981,-37.37564 -39.90103,-42.42641 -8.08122,-5.05076 -90.40865,-25.758886 -90.40865,-25.758886 l -60.60915,36.870566 -8.5863,64.14469 -0.50508,10.6066 -4.04061,0 1.01016,19.1929 c 0,0 -0.50508,21.2132 1.01015,24.24366 1.51523,3.03046 6.06091,10.10153 6.06091,10.10153 l 1.51523,12.12183 7.07107,5.05076 3.03046,31.31473 23.23351,42.93148 5.05076,6.56599 2.52538,25.25382 16.16244,72.2259 c 0,0 129.29953,-26.26396 127.7843,-30.80965 -1.51523,-4.54569 -14.64721,-96.46957 -14.64721,-96.46957 z"
        id="path4178"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 313.14729,344.75034 27.7792,20.20306 c 0,0 49.49747,6.06091 54.54823,-1.01016 5.05077,-7.07107 40.91118,-55.05331 40.91118,-55.05331"
        id="path4180"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 438.91128,320.00161 -19.69797,35.86041 -31.31473,21.71828 -43.43656,1.51523 0,-1.01015"
        id="path4182"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 458.60926,216.46097 8.08122,-9.09137 c 0,0 4.54568,4.54568 3.03046,8.58629 -1.51523,4.04061 -4.54569,23.23351 -4.54569,23.23351 l -12.12183,10.6066"
        id="path4184"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 273.75134,211.91528 c 0,0 -3.53553,-4.04061 -3.03046,-2.0203 0.50508,2.0203 2.52538,24.24366 2.52538,24.24366 l 2.02031,7.07107"
        id="path4186"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#4d3426;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#4d3426;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 433.60798,216.96605 c 4.19509,-5.36082 -17.37992,-19.52834 -19.95051,-17.42513 l -42.93148,9.84899 4.29314,7.82867 c 2.88093,-3.31773 24.50279,-14.15263 58.58885,-0.25253 z"
        id="path4192"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#4d3426;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#4d3426;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 345.21963,215.95589 -31.8198,-14.64721 c 0,0 -19.69798,1.26269 -19.95052,2.27285 -0.25253,1.01015 -8.33375,10.85914 -7.3236,10.6066 1.01015,-0.25254 20.70813,-4.04061 20.70813,-4.04061 l 36.36549,12.12183 z"
        id="path4194"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccssccc" />
+       sodipodi:nodetypes="ccssccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 333.94208,226.16202 -7.99563,-3.87977 -5.13636,-1.42353 c -10.80067,-0.1526 -17.73737,4.05053 -27.27412,6.56599 17.95735,5.68423 25.76946,8.69023 40.40611,-1.26269 z"
        id="path4190"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 380.0699,266.9686 c 1.26269,1.01015 1.51523,10.35406 1.51523,10.35406 0,0 -3.78808,4.04061 -4.79823,4.04061 -1.01015,0 -11.36422,-2.27284 -11.36422,-2.27284 l -7.07106,7.82868 -12.87945,-0.25254 -6.56599,-7.82868 c 0,0 -8.08122,-1.01015 -8.33376,-2.27284 -0.25254,-1.26269 -5.05076,-7.57615 -5.05076,-7.57615 l 3.53553,-5.80837"
        id="path4198"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccsccccscc" />
+       sodipodi:nodetypes="ccsccccscc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 372.99883,222.52189 -5.55584,6.81853 1.51523,14.89975 4.79822,7.3236"
        id="path4204"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 346.9874,223.78458 c -0.25254,1.76776 -1.51523,12.12183 -1.51523,12.12183 l -3.03046,10.85914"
        id="path4206"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 326.53181,259.13992 -13.8896,16.41497"
        id="path4208"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 422.4963,279.84804 -8.33375,35.1028 -4.04061,19.1929 -21.46575,21.71828 -32.57742,9.09137"
        id="path4210"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccc" />
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 309.86429,284.14119 -8.58629,8.08122 -0.25254,7.32361"
        id="path4212"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 419.71838,226.5625 c -9.09137,-3.2593 -18.18274,-5.40232 -27.27411,-5.3033 l -14.14214,6.31345 c 23.64152,10.71296 20.7267,8.95525 41.41625,-1.01015 z"
        id="path4188"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <ellipse
-       style="opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4249"
        cx="399.10715"
        cy="227.89792"
        rx="7.6785717"
-       ry="6.25" />
+       ry="6.25"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <ellipse
-       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4251"
        cx="399.10715"
        cy="228.43362"
        rx="3.0357144"
-       ry="3.2142856" />
+       ry="3.2142856"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <ellipse
-       style="display:inline;opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;opacity:1;fill:#3c241b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4249-8"
        cx="316.42859"
        cy="227.00505"
        rx="7.6785717"
-       ry="6.25" />
+       ry="6.25"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <ellipse
-       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4251-9"
        cx="316.78574"
        cy="227.18362"
        rx="3.0357144"
-       ry="3.2142856" />
+       ry="3.2142856"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="skjorta"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
-       style="fill:#bdd7e8;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#bdd7e8;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 446.48743,315.961 c 2.0203,4.04061 19.19289,43.43656 19.19289,43.43656 0,0 36.3655,18.18274 38.3858,25.25381 2.02031,7.07107 78.7919,88.89342 78.7919,88.89342 l 18.18275,69.70053 -4.04061,83.84266 c 0,0 -20.20305,16.16244 -20.20305,21.21321 0,5.05076 -40.40611,105.05586 -40.40611,105.05586 l -4.04061,44.44671 -2.0203,61.61931 2.0203,55.55839 -9.09137,6.06091 c -86.21791,64.32119 -170.37849,71.68691 -261.62951,33.33504 l -21.2132,-25.25382 -5.05077,-171.72593 -48.48732,9.09137 -71.72083,-25.25381 c 0,0 -29.294423,-39.39595 -27.274118,-45.45686 2.020305,-6.06092 26.263968,-89.90358 26.263968,-89.90358 0,0 92.93403,-113.13709 95.96449,-120.20815 3.03046,-7.07107 25.25381,-59.59901 25.25381,-59.59901 l 82.83251,-40.4061 -3.03045,-16.16244 23.2335,32.32488 7.07107,0 c 24.46316,-7.83186 50.62929,-24.17857 77.78174,-45.45686 z"
        id="path4144"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccscccsccccccccccscsccccccc" />
+       sodipodi:nodetypes="ccscccsccccccccccscsccccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 464.67017,358.3874 c 1.01015,8.08122 -20.20305,33.33504 -20.20305,33.33504 l -73.74113,63.63961 -27.27412,-52.52793 -4.04061,0 -10.10153,6.06091 -6.06091,18.18275 c 0,0 -15.15229,27.27412 -15.15229,23.23351 0,-4.04061 8.08122,-61.61931 8.08122,-61.61931"
        id="path4146"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 106.06602,656.38241 12.12183,-11.11168 21.2132,-11.11168 22.22336,6.06092 -15.15229,-13.13199 -23.23351,-11.11168"
        id="path4148"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 159.6041,640.21997 36.36549,17.17259 11.11168,0"
        id="path4150"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 227.28432,663.45347 39.39595,1.01016 c 0,0 -12.12183,8.08122 -12.12183,13.13198 0,5.05076 -1.01015,27.27412 -1.01015,31.31473 0,4.04061 0,20.20305 0,20.20305 l 25.25381,13.13198 22.22336,-6.06091 44.44671,-4.04061 16.16244,2.0203 4.04061,-15.15229 3.03046,-7.07106 c 0,0 1.01015,-44.44672 3.03046,-49.49748 2.0203,-5.05076 34.34518,-61.6193 34.34518,-61.6193 l 3.03046,-10.10153 8.08122,-12.12183 46.46702,-83.84266 41.41625,-30.30458"
        id="path4152"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 420.22346,578.60066 C 425.27422,575.5702 510.12704,494.758 510.12704,494.758"
        id="path4154"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 234.35539,759.41797 72.73098,69.70052 92.93404,51.51778 43.43656,-15.15229 c 0,0 25.25381,-34.34518 29.29442,-38.38579 4.04061,-4.04061 32.32488,-31.31473 32.32488,-31.31473 l 20.20306,-60.60916 44.44671,-75.76144 2.0203,-21.2132"
        id="path4156"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 228.79955,663.95855 -24.74874,-8.5863 -31.31472,18.18275"
        id="path4158"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -260,7 +345,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="tand"
-     style="display:inline">
+     style="display:none">
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 316.05148,294.36899 c 4.54569,0.12626 31.8198,4.92449 31.8198,4.92449 l 35.10281,0.75761 14.39467,-1.51523 -2.65165,4.67196 c 0,0 -15.65737,12.12183 -17.17259,12.75318 -1.51523,0.63134 -31.94608,6.94479 -33.0825,6.56599 -1.13642,-0.37881 -15.5311,-8.71257 -16.28871,-10.2278 -0.75761,-1.51523 -8.20749,-11.61675 -8.71257,-11.86929 -0.50507,-0.25254 -3.40926,-6.06091 -3.40926,-6.06091 z"
@@ -315,57 +400,81 @@
      inkscape:label="mun"
      style="display:inline">
     <path
-       style="fill:#ab6e76;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ab6e76;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 401.78818,297.77825 -42.42641,-0.75761 c 0,0 -3.53553,1.26269 -6.56599,1.26269 -3.03046,0 -15.15229,-5.05077 -15.15229,-5.05077 l -24.24366,0.50508 15.40482,6.06092 16.41498,4.79822 30.30458,0.25254 z"
        id="path4217"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccscccccc" />
+       sodipodi:nodetypes="ccscccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="fill:#9a424e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#9a424e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 314.29269,294.49525 c 0,0 7.94597,16.92006 9.4612,18.68783 1.51523,1.76776 13.63706,14.39467 13.63706,14.39467 0,0 26.76904,0 28.53681,-0.25254 1.76777,-0.25254 13.8896,-6.31345 14.89975,-7.82868 1.01015,-1.51523 18.18275,-20.96067 18.18275,-20.96067 l -14.64721,8.08123 c 0,0 -15.40483,6.06091 -16.92006,6.31345 -1.51523,0.25254 -28.53681,1.01015 -28.53681,1.01015 0,0 -16.92005,-13.63706 -17.67767,-14.89975 -0.75761,-1.26269 -6.93582,-4.54569 -6.93582,-4.54569 z"
        id="path4219"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cscssccscsc" />
+       sodipodi:nodetypes="cscssccscsc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="hår">
     <path
-       style="fill:#3c241b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#3c241b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 451.03311,235.14879 3.53554,-19.1929 c 0,0 9.59645,-12.12183 10.10152,-14.14213 0.80101,-17.1695 11.34024,-43.108 10.51995,-68.44091 0.54278,-15.20156 -41.89849,-56.726437 -45.37021,-54.797702 l -5.05076,1.010152 c -1.82117,-4.552918 -21.75802,-25.419817 -25.25382,-27.274119 -55.7716,-19.930548 -87.39731,2.568285 -122.73353,29.799501 -8.25901,16.327263 -15.9003,32.886168 -16.66752,52.022858 3.34031,37.28615 6.29662,64.70214 15.65737,97.9848 0.21917,-33.07153 4.70235,-61.63285 11.61675,-93.43912 l 19.1929,-14.14213 c 30.82145,5.53721 57.63057,4.60778 88.38835,3.03046 l 11.11167,-10.10153 25.48841,2.22952 9.36186,61.41009 7.57614,10.6066 -4.04061,42.93149 z"
        id="path4241"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccccccccc" />
+       sodipodi:nodetypes="ccccccccccccccccccc"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="hand">
     <path
-       style="fill:#cda289;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#cda289;fill-rule:evenodd;stroke:#000000;stroke-width:7.19999981;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 264.28572,664.8622 c 0,0 36.07142,-13.92857 38.57142,-16.07143 2.5,-2.14285 43.57143,-39.28571 43.57143,-39.28571 0,0 21.07143,-7.14286 23.92857,-10.35714 2.85715,-3.21429 36.78572,-28.57143 36.78572,-28.57143 l 6.78571,5 -1.07143,15.35714 -7.14285,6.07143 -1.78572,10.71429 -14.28571,11.78571 -14.28572,10 -1.07142,6.78571 12.5,4.28572 -9.64286,13.57143 -7.5,27.85714 -1.42857,27.14286 c 0,0 -5.35715,6.42857 -5.71429,8.57143 -0.35714,2.14285 -0.35714,12.85714 -0.35714,12.85714 l -17.5,3.21428 -72.14286,7.14286 c 0,0 -17.5,-10 -16.78571,-11.42857 0.71428,-1.42857 -3.57143,-38.92857 -3.57143,-38.92857 z"
        id="path4273"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="opacity:1;fill:#b38971;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#b38971;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 162.63456,642.24027 c -1.01015,-7.57614 -23.23351,-47.98225 -20.70813,-52.52793 2.52538,-4.54569 5.05077,-7.07107 5.05077,-7.07107 l 2.0203,0.50508 c 0,0 -1.51523,-6.06092 -0.50508,-8.08122 1.01016,-2.02031 5.05077,-8.08122 5.05077,-8.08122 l 8.58629,-1.01016 c 0,0 -3.03045,-2.52538 -1.51522,-4.54568 1.51522,-2.02031 3.53553,-4.04061 3.53553,-4.04061 l 10.6066,-3.03046 6.56599,-8.5863 10.10153,-3.53553 13.13198,9.09137 32.82996,41.41626 7.57614,35.86041 13.13199,36.87057 -25.75889,-1.01015 -41.92133,-10.60661 z"
        id="path4277"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 149.50258,584.66157 21.2132,34.85027 2.52538,11.11168"
        id="path4279"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 162.12948,566.47883 c 0,0 9.59645,17.67767 10.60661,19.69797 1.01015,2.02031 15.65736,23.23351 15.65736,23.23351"
        id="path4281"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
     <path
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:7.19999981;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 176.27162,554.86207 10.6066,16.16245 24.24366,28.28427"
        id="path4283"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/martin/Documents/businessman_icon.png"
+       inkscape:export-xdpi="8.8654861"
+       inkscape:export-ydpi="8.8654861" />
   </g>
 </svg>

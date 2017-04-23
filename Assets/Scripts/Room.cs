@@ -18,6 +18,14 @@ public class Room : Singleton<Room> {
     [SerializeField]
     int difficultyLvl = 1;
 
+    public int Difficulty
+    {
+        get
+        {
+            return difficultyLvl;
+        }
+    }
+
     public ConversationGenerator Conversation
     {
         get {
@@ -46,6 +54,7 @@ public class Room : Singleton<Room> {
     public void Response(ConversationPiece response)
     {
         MiniGameLoader.instance.UnloadCurrent();
+        MiniGameControllerUI.instance.HideAll();
         playerCat = response.Category;
         if (_Conversation.currentPerson.likes.Contains(response.Category))
         {
@@ -60,7 +69,6 @@ public class Room : Singleton<Room> {
             otherHappy = false;
             otherPiecesThisTurn = 2;
         }
-
         DialogueDisplayer.instance.ShowDialogue(response, selfIcon, ConversationCallbackMe);
 
     }
@@ -68,6 +76,7 @@ public class Room : Singleton<Room> {
     public void ResponseSilent()
     {
         MiniGameLoader.instance.UnloadCurrent();
+        MiniGameControllerUI.instance.HideAll();
         otherHappy = false;
         playerCat = ConversationCategory.Silent;
         difficultyLvl++;
@@ -77,61 +86,52 @@ public class Room : Singleton<Room> {
 
     void ConversationCallbackMe()
     {
-        ConversationPiece piece;
         otherPiecesThisTurn--;
         if (otherPiecesThisTurn > 0)
         {
 
-            if (!otherHappy)
-            {
-                if (playerCat == ConversationCategory.Silent)
-                {
-                    piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
-                    playerCat = frenemyCat;
-                } else
-                {
-                    piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
-                }
-                otherHappy = true;
-            } else if (playerCat == frenemyCat)
-            {
-                piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
-            } else
-            {
-                piece = _Conversation.GenerateConversation(ConversationQuality.Good);
-            }
-            frenemyCat = piece.Category;
-            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, ConversationCallbackMe);
+            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, ConversationCallbackMe);
             
         }
         else {
-
-            if (!otherHappy)
-            {
-                if (playerCat == ConversationCategory.Silent)
-                {
-                    piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
-                    playerCat = frenemyCat;
-                }
-                else
-                {
-                    piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
-                }
-                otherHappy = true;
-            }
-            else if (playerCat == frenemyCat)
-            {
-                piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
-            }
-            else
-            {
-                piece = _Conversation.GenerateConversation(ConversationQuality.Good);
-            }
-            frenemyCat = piece.Category;
-            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, ConversationCallackOther);
+            
+            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, ConversationCallackOther);
         }
     }
 
+    ConversationPiece GetPiece()
+    {
+        ConversationPiece piece;
+        if (!otherHappy)
+        {
+            if (playerCat == ConversationCategory.Silent)
+            {
+                Debug.Log("Player Silent, Other Unhappy");
+                piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
+                playerCat = frenemyCat;
+            }
+            else
+            {
+                Debug.Log("Player " + playerCat + ", Other Unhappy");
+                piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
+                frenemyCat = ConversationCategory.Silent;
+            }
+            otherHappy = true;
+        }
+        else if (playerCat == frenemyCat)
+        {
+            Debug.Log("Player and Frenemy " + frenemyCat);
+            piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
+        }
+        else
+        {
+            Debug.Log("Frenemy select new topic");
+            piece = _Conversation.GenerateConversation(ConversationQuality.Good);
+            frenemyCat = piece.Category;
+        }
+        
+        return piece;
+    }
     void ConversationCallackOther()
     {
         ProfileViewer.instance.HideProfile();

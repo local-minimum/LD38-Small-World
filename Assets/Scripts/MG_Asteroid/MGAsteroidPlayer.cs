@@ -8,11 +8,6 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
     public Rigidbody2D m_Player;
     public Rigidbody2D m_Conversationoid;
 
-    public float m_Timeout = 10.0f;
-    private ConversationGenerator m_ConvGenerator;
-    private float m_TimeLeft = 0.0f;
-    private bool m_Playing = false;
-
     private void Start()
     {
         if (Room.IsInstanciated)
@@ -24,26 +19,17 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         {
             m_ConvGenerator = GetComponent<ConversationGenerator>();
         }
-
-        StartCoroutine(DelayPlay());
-    }
-    
-    IEnumerator<WaitForSeconds> DelayPlay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Play(3);
     }
 
     override public void Play(int difficulty)
     {
-        int goodConvCount = 1;
+        int goodConvCount = 2;
         int badConvCount = 5;
                 
         var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
         var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, badConvCount);
 
         m_TimeLeft = m_Timeout;
-        Debug.Log("m_TimeLeft=" + m_TimeLeft);
 
         SpawnObject(m_Player);
 
@@ -81,23 +67,15 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(m_Conversationoid, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.transform.SetParent(Asteroids);
-
         prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
 
         Sprite sprite = DialogueDisplayer.instance.GetSpriteFromCategory(conversationPiece.Category);
         prefabClone.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
-    public void Update()
+    public override void EndGame()
     {
-        if (m_Playing)
-        {
-            m_TimeLeft -= Time.deltaTime;
-            if (m_TimeLeft < 0)
-            {
-                Room.instance.ResponseSilent();
-                m_Playing = false;
-            }
-        }
+        m_Playing = false;
+        Room.instance.ResponseSilent();
     }
 }
