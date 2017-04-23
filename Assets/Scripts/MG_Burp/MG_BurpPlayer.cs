@@ -110,7 +110,7 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
             Room.instance.ResponseSilent();
         } else
         {
-            Debug.Log(piece.Category);
+            Debug.Log("Burp selected " + piece.Category);
             Room.instance.Response(piece);
         }
     }

@@ -32,6 +32,31 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
 
     RenderTexture rendTexture;
 
+    public bool TargetRectMousePos(out Vector2 pos)
+    {
+
+        Vector2 screenPos = Input.mousePosition;
+        Rect miniRect = RectTransformToScreenSpace(miniGame.rectTransform);
+        if (miniRect.Contains(screenPos))
+        {
+            pos = screenPos - miniRect.min;
+            pos.x /= miniRect.width;
+            pos.y /= miniRect.height;
+            return true;
+        } else
+        {
+            Debug.Log(screenPos + " outside " + miniRect);
+            pos = Vector2.zero;
+            return false;
+        }
+    }
+
+    public static Rect RectTransformToScreenSpace(RectTransform transform)
+    {
+        Vector2 size = Vector2.Scale(transform.rect.size, transform.lossyScale);
+        return new Rect((Vector2)transform.position - (size * 0.5f), size);
+    }
+
     void Load(string name)
     {
         if (!string.IsNullOrEmpty(currentMiniGameScene))

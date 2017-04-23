@@ -20,14 +20,32 @@ public class ClickedOnMe : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePosition  = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D[] hitColliders = Physics2D.OverlapPointAll(mousePosition, clickLayer);
+            Vector2 pos = mousePosition;
+            Collider2D[] hitColliders = Physics2D.OverlapPointAll(pos, clickLayer);
             if (hitColliders.Contains(col))
             {
                 Clicked();
             } 
         }
     }
+
+    Vector2 mousePosition
+    {
+
+        get
+        {
+            Vector2 pos;
+            if (MiniGameLoader.instance.TargetRectMousePos(out pos))
+            {
+                return MiniGameCam.instance.SceneCamera.ViewportToWorldPoint(pos);
+            } else
+            {
+                return Vector2.one * -1;
+            }
+
+        }
+    }
+
 
     virtual protected void Clicked()
     {
