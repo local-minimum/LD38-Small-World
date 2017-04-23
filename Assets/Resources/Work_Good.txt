@@ -9,3 +9,5 @@ I got promoted last week!
 My boss <title> <surname> fired <name> after that scandal, you know.
 I sell <noun.pl> for a living. 
 I'm a door to door <noun> seller.
+I work at <surname> and <surname>. We're big in the <adj> <noun> business.
+Here take my card. It's made from the finest <adj> <noun> paper.

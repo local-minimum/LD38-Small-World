@@ -1,3 +1,4 @@
 I don't like sports.
 I hate <activity-sport>!
 Why would anyone ever watch <activity-sport>?
+I just think <activity-sport> is a waste of time.
