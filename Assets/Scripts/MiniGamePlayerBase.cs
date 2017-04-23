@@ -50,6 +50,11 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
 
     protected bool m_Playing = false;
 
+    public bool Playing
+    {
+        get { return m_Playing; }
+    }
+
     public abstract void EndGame();    
 
     public void Update()

@@ -12,7 +12,7 @@ public class SilenceUI : MonoBehaviour {
 
     void Update()
     {
-        bool showing = MiniGamePlayerBase.IsInstanciated;
+        bool showing = MiniGamePlayerBase.IsInstanciated && MiniGamePlayerBase.instance.Playing;
 
         if (showing)
         {
