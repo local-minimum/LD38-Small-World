@@ -101,7 +101,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
     {
         yield return new WaitForSeconds(0.01f);
         MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
-
+        MiniGameControllerUI.instance.Show(MiniGamePlayerBase.instance.controllers);
         yield return new WaitForSeconds(easeOutDuration);
         miniGameBG.raycastTarget = true;
         miniGame.raycastTarget = true;

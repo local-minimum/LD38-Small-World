@@ -46,6 +46,7 @@ public class Room : Singleton<Room> {
     public void Response(ConversationPiece response)
     {
         MiniGameLoader.instance.UnloadCurrent();
+        MiniGameControllerUI.instance.HideAll();
         playerCat = response.Category;
         if (_Conversation.currentPerson.likes.Contains(response.Category))
         {
@@ -67,6 +68,7 @@ public class Room : Singleton<Room> {
     public void ResponseSilent()
     {
         MiniGameLoader.instance.UnloadCurrent();
+        MiniGameControllerUI.instance.HideAll();
         otherHappy = false;
         playerCat = ConversationCategory.Silent;
         difficultyLvl++;
