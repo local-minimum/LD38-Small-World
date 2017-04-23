@@ -1002,10 +1002,10 @@ RectTransform:
   m_Father: {fileID: 349556290}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -27, y: 115}
-  m_SizeDelta: {x: 186.5, y: 281.7}
+  m_AnchorMin: {x: 0.5786828, y: -0.11193546}
+  m_AnchorMax: {x: 0.88419354, y: 0.8241936}
+  m_AnchoredPosition: {x: 0.0000038146973, y: 0}
+  m_SizeDelta: {x: 0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348439428
 MonoBehaviour:
@@ -1040,23 +1040,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348439426}
---- !u!95 &1348439430
-Animator:
-  serializedVersion: 3
+--- !u!114 &1348439430
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348439426}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5343e514df7c2f74e8fa14bea3b0ef0d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e13899beea034690534ddff67dec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1385680509 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114040109576318318, guid: fd3c50b4f0a1f644781335a04bdbdb9d,
@@ -1166,6 +1160,7 @@ GameObject:
   - component: {fileID: 1656999181}
   - component: {fileID: 1656999180}
   - component: {fileID: 1656999182}
+  - component: {fileID: 1656999183}
   m_Layer: 5
   m_Name: Mouth
   m_TagString: Untagged
@@ -1186,10 +1181,10 @@ RectTransform:
   m_Father: {fileID: 1348439427}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.4, y: 64.3}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchorMin: {x: 0.42872855, y: 0.6844705}
+  m_AnchorMax: {x: 0.62230533, y: 0.7763611}
+  m_AnchoredPosition: {x: 0.0000009536743, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656999180
 MonoBehaviour:
@@ -1241,6 +1236,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1656999183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656999178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e13899beea034690534ddff67dec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1698781632 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224221186859609292, guid: 55f63c67d837d9a4a9fce43e273bd166,

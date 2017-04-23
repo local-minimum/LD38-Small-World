@@ -91,7 +91,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         miniGame.raycastTarget = false;
         
         yield return new WaitForSeconds(easeOutDuration);
-        miniGameBG.color = loadedColor;
+        miniGameBG.color = nonLoadedColor;
         miniGame.enabled = false;
         roomCamera.GetComponent<AudioListener>().enabled = true;
 
