@@ -15,13 +15,13 @@ public class MG_BurpSelector : Singleton<MG_BurpItem> {
         }
     }
 
-    ConversationCategory m_Category = ConversationCategory.Silent;
+    ConversationPiece m_Piece = null;
 
-    public ConversationCategory SelectedCategory
+    public ConversationPiece SelectedPiece
     {
         get
         {
-            return m_Category;
+            return m_Piece;
         }
     }
 
@@ -36,7 +36,7 @@ public class MG_BurpSelector : Singleton<MG_BurpItem> {
         if (selected == null)
         {
             selected = other;
-            m_Category = item.category;
+            m_Piece = item.piece;
             StartCoroutine(AnimateSelection(other.transform));
         } else
         {

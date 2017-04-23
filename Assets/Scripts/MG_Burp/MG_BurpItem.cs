@@ -6,7 +6,7 @@ public class MG_BurpItem : MonoBehaviour {
 
     public float maxSpeed = 2;
     public float minSpeed = 1;
-    public ConversationCategory category;
+    public ConversationPiece piece;
 
     Rigidbody2D rb;
 
