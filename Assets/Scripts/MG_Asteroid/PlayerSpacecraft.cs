@@ -2,8 +2,8 @@
 
 public class PlayerSpacecraft : MonoBehaviour
 {
-    public float m_AccelerationForce = 100.0f;
-    public float m_RotationForce = 0.1F;
+    public float m_AccelerationForce = 10.0f;
+    public float m_RotationForce = 10.0F;
 
     private Rigidbody2D m_RigidBody;
 
@@ -24,7 +24,9 @@ public class PlayerSpacecraft : MonoBehaviour
     {
         if (collision.gameObject.name == "Conversationoid")
         {
-            //MGAsteroidPlayer.PlayerGotConversationoid(collision.gameObject.GetComponent<ConversationPiece>());   
+            //MGAsteroidPlayer.instance.PlayerGotConversationPiece(collision.gameObject.GetComponent<ConversationPiece>()); 
+            Room.instance.Response(collision.gameObject.GetComponent<ConversationPiece>());
+            Destroy(collision.gameObject);
         }
     }
 }

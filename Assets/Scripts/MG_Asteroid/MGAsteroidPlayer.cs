@@ -44,16 +44,21 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         m_TimeLeft = m_Timeout;
         Debug.Log("m_TimeLeft=" + m_TimeLeft);
 
-        SpawnPlayer();
+        SpawnObject(m_Player);
+
+        for (int i = 0; i < 5; i++)
+        {
+            SpawnObject(m_Asteroid);
+        }
 
         foreach (var conversationPiece in goodConversations)
         {
-            SpawnObject(conversationPiece);
+            SpawnConversationoid(conversationPiece);
         }
 
         foreach (var conversationPiece in badConversations)
         {
-            SpawnObject(conversationPiece);
+            SpawnConversationoid(conversationPiece);
         }
         m_Playing = true;
     }
@@ -70,12 +75,19 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         clone.transform.SetParent(Asteroids);
     }
 
-    private void SpawnObject(ConversationPiece conversationPiece)
+    private void SpawnObject(Rigidbody2D rigidbody)
+    {
+        Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
+        Rigidbody2D prefabClone = (Rigidbody2D)Instantiate(rigidbody, transform.position, transform.rotation);
+        prefabClone.transform.position = randomScreenPosition;
+        prefabClone.transform.SetParent(Asteroids);
+    }
+
+    private void SpawnConversationoid(ConversationPiece conversationPiece)
     {
         Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
         Rigidbody2D prefabClone = (Rigidbody2D)Instantiate(m_Asteroid, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
-        prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
         prefabClone.transform.SetParent(Asteroids);
     }
 
@@ -86,7 +98,6 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
             m_TimeLeft -= Time.deltaTime;
             if (m_TimeLeft < 0)
             {
-                Debug.Log("Timeout");
                 Room.instance.ResponseSilent();
                 m_Playing = false;
             }
