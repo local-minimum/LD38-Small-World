@@ -16,7 +16,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="flat.svg">
+   sodipodi:docname="flat.svg"
+   inkscape:export-filename="D:\martin\Documents\Unity Games\LD38-Small-World\Assets\Sprites\Rooms\homeBG.png"
+   inkscape:export-xdpi="78.32"
+   inkscape:export-ydpi="78.32">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -30,7 +33,7 @@
      inkscape:cx="1044.0269"
      inkscape:cy="489.61974"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      showguides="false"
      inkscape:window-width="1920"
@@ -59,7 +62,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(385.71429,-197.50507)"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <image
        y="197.50507"
        x="-385.71429"
@@ -22942,8 +22946,8 @@ emscrz2/ZvSrdK52c71KIsieCM8d6BvvPSeAY4y0bho3Ema164iO1w7pk5zN8buUAsntxJtaxj5H
      id="layer2"
      inkscape:label="Room"
      style="display:inline"
-     sodipodi:insensitive="true"
-     transform="translate(385.71429,-197.50507)">
+     transform="translate(385.71429,-197.50507)"
+     sodipodi:insensitive="true">
     <path
        style="fill:#b5b0ac;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m -407.14286,163.79078 0,68.57142 84.28572,118.57143 L 482.85714,462.3622 1034.2857,153.79078 730,155.21935 422.85714,388.07649 -270,289.50506 -341.42857,153.79078 Z"
@@ -23061,6 +23065,18 @@ emscrz2/ZvSrdK52c71KIsieCM8d6BvvPSeAY4y0bho3Ema164iO1w7pk5zN8buUAsntxJtaxj5H
        d="m -311.63206,333.63867 23.73858,-27.27412"
        id="path4201"
        inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -311.69641,333.34433 -1.16071,700.44647"
+       id="path4186"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 445.87278,438.66079 445.3677,918.98515"
+       id="path4188"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -23119,16 +23135,4 @@ emscrz2/ZvSrdK52c71KIsieCM8d6BvvPSeAY4y0bho3Ema164iO1w7pk5zN8buUAsntxJtaxj5H
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
   </g>
-  <path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 74.017882,135.83927 -1.16071,700.44646"
-     id="path4186"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 831.58702,241.15572 -0.50508,480.32433"
-     id="path4188"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" />
 </svg>
