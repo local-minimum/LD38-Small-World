@@ -23,7 +23,8 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
 
     public abstract void Play(int difficulty);
 
-
+    [SerializeField]
+    bool autoPlay = false;
 
     protected ConversationGenerator m_ConvGenerator;
 
@@ -37,9 +38,12 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
         if (m_ConvGenerator == null)
         {
             m_ConvGenerator = GetComponent<ConversationGenerator>();
-            //StartCoroutine(DelayPlay());
         }
-       
+
+        if (autoPlay)
+        {
+            StartCoroutine(DelayPlay());
+        }
     }
 
     IEnumerator<WaitForSeconds> DelayPlay()
