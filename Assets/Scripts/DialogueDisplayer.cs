@@ -17,14 +17,19 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
     Image contentType;
 
     [SerializeField]
+    Text nameField;
+
+    [SerializeField]
     GameObject dialogueParent;
 
     Action _callback;
 
     bool displaying = false;
 
-    public void ShowDialogue(ConversationPiece piece, Sprite icon, Action callback)
+    public void ShowDialogue(ConversationPiece piece, Sprite icon, bool isPlayer, Action callback)
     {
+        nameField.text = isPlayer ? "YOU:" : Room.instance.Conversation.currentPerson.FullName + ":";
+
         iconImage.sprite = icon;
         dialogueText.text = piece.Text;
 

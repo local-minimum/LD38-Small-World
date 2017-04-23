@@ -293,12 +293,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bd99313ddb1424ba5d153e82075cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllers: 01000000
+  m_Timeout: 20
+  autoPlay: 0
   m_Asteroid: {fileID: 50362534300009688, guid: a5a5e8066a36bb34bb0086bdc354d7d2,
     type: 2}
   m_Player: {fileID: 50358837822338718, guid: c95652175975ba743891960969822a13, type: 2}
   m_Conversationoid: {fileID: 50362534300009688, guid: 0e5185c40803b0d428844147a2b13d6c,
     type: 2}
-  m_Timeout: 20
   Asteroids: {fileID: 1817998722}
 --- !u!114 &1332160798
 MonoBehaviour:
@@ -311,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9388604c4d32b47e48b71074816b6189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  genderEncoding: 0
   likes: 00000000
   dislikes: 06000000
   icon: {fileID: 0}

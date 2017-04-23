@@ -44,7 +44,7 @@ public class Room : Singleton<Room> {
     public void Greet() {
         otherHappy = true;
         frenemyCat = ConversationCategory.Greeting;
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, ConversationCallbackMe);
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, false, ConversationCallbackMe);
 
     }
 
@@ -69,7 +69,7 @@ public class Room : Singleton<Room> {
             otherHappy = false;
             otherPiecesThisTurn = 2;
         }
-        DialogueDisplayer.instance.ShowDialogue(response, selfIcon, ConversationCallbackMe);
+        DialogueDisplayer.instance.ShowDialogue(response, selfIcon, true, ConversationCallbackMe);
 
     }
 
@@ -81,7 +81,7 @@ public class Room : Singleton<Room> {
         playerCat = ConversationCategory.Silent;
         difficultyLvl++;
         otherPiecesThisTurn = Random.Range(2, 5);
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, ConversationCallbackMe);
+        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, true, ConversationCallbackMe);
     }
 
     void ConversationCallbackMe()
@@ -90,12 +90,12 @@ public class Room : Singleton<Room> {
         if (otherPiecesThisTurn > 0)
         {
 
-            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, ConversationCallbackMe);
+            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, false, ConversationCallbackMe);
             
         }
         else {
             
-            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, ConversationCallackOther);
+            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, false, ConversationCallackOther);
         }
     }
 

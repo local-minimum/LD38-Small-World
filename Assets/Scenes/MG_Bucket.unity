@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllers: 01000000
   m_Timeout: 20
-  autoPlay: 1
+  autoPlay: 0
   spawnParents:
   - {fileID: 421579637}
   - {fileID: 2004358815}
@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9388604c4d32b47e48b71074816b6189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  genderEncoding: 0
   likes: 0000000006000000
   dislikes: 01000000020000000400000005000000
   icon: {fileID: 0}
@@ -1051,7 +1052,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4226784911152450, guid: b574e19ca9413434b88eb0cbfb7fd2d1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4226784911152450, guid: b574e19ca9413434b88eb0cbfb7fd2d1, type: 2}
       propertyPath: m_LocalPosition.y

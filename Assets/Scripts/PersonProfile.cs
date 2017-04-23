@@ -26,6 +26,7 @@ public class PersonProfile : MonoBehaviour {
     string nameHistory;
     string _name;
     string _history;
+    string _firstName;
 
     public string FullName
     {
@@ -34,6 +35,19 @@ public class PersonProfile : MonoBehaviour {
                 LoadNameHistory();
             }
             return _name;
+        }
+    }
+
+    public string FirstName
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(_firstName))
+            {
+                LoadNameHistory();
+            }
+
+            return _firstName;
         }
     }
 
