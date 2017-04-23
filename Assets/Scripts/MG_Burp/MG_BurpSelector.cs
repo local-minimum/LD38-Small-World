@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LocalMinimum;
 
-public class MG_BurpSelector : Singleton<MG_BurpItem> {
+public class MG_BurpSelector : Singleton<MG_BurpSelector> {
 
     
     Collider2D selected = null;

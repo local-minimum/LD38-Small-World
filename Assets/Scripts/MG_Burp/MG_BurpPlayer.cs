@@ -14,7 +14,7 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
         int badConvCount = 4;
 
         var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
-        var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, badConvCount);
+        var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, ConversationQuality.Good, badConvCount);
 
         m_TimeLeft = m_Timeout;
         Debug.Log("m_TimeLeft=" + m_TimeLeft);
@@ -104,12 +104,13 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
             return;
         }
         m_Playing = false;
-        ConversationPiece piece = MG_BurpSelector.instance.piece;
+        ConversationPiece piece = MG_BurpSelector.instance.SelectedPiece;
         if (piece == null)
         {
             Room.instance.ResponseSilent();
         } else
         {
+            Debug.Log(piece.Category);
             Room.instance.Response(piece);
         }
     }

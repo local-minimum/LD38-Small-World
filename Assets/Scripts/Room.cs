@@ -60,7 +60,6 @@ public class Room : Singleton<Room> {
             otherHappy = false;
             otherPiecesThisTurn = 2;
         }
-
         DialogueDisplayer.instance.ShowDialogue(response, selfIcon, ConversationCallbackMe);
 
     }
