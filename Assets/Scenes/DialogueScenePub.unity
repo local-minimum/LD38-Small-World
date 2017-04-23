@@ -929,6 +929,7 @@ GameObject:
   - component: {fileID: 1348439427}
   - component: {fileID: 1348439429}
   - component: {fileID: 1348439428}
+  - component: {fileID: 1348439430}
   m_Layer: 5
   m_Name: Man
   m_TagString: Untagged
@@ -950,9 +951,9 @@ RectTransform:
   m_Father: {fileID: 349556290}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218, y: -72}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -27, y: 115}
   m_SizeDelta: {x: 186.5, y: 281.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1348439428
@@ -988,6 +989,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348439426}
+--- !u!95 &1348439430
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348439426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5343e514df7c2f74e8fa14bea3b0ef0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1385680509 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114040109576318318, guid: fd3c50b4f0a1f644781335a04bdbdb9d,
@@ -1010,6 +1028,7 @@ GameObject:
   - component: {fileID: 1626510883}
   - component: {fileID: 1626510885}
   - component: {fileID: 1626510884}
+  - component: {fileID: 1626510886}
   m_Layer: 5
   m_Name: BarBg2
   m_TagString: Untagged
@@ -1068,6 +1087,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626510882}
+--- !u!95 &1626510886
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626510882}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6742aa57c4d40b4b9d25efd20bf8703, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1656999178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1114,7 @@ GameObject:
   - component: {fileID: 1656999179}
   - component: {fileID: 1656999181}
   - component: {fileID: 1656999180}
+  - component: {fileID: 1656999182}
   m_Layer: 5
   m_Name: Mouth
   m_TagString: Untagged
@@ -1136,6 +1173,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656999178}
+--- !u!95 &1656999182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656999178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a50238234ec7bbf4198e523d457c12c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1746359176 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114993534139359378, guid: 605e20a5c7c59774288f72d8744506d3,
