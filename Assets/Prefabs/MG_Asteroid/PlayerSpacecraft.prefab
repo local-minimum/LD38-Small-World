@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114599243244188338}
   - component: {fileID: 114389234935010944}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: PlayerSpacecraft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

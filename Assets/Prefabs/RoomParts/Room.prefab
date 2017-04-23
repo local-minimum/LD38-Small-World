@@ -121,7 +121,7 @@ MonoBehaviour:
   difficultyLvl: 1
   convoPieces: 2
   otherPiecesThisTurn: 1
-  nextScene: SigridDevScene
+  nextScene: MGAsteroid
   delayBeforeProfile: 0.5
   delayBeforeGreet: 2
   delayBeforeHide: 5
