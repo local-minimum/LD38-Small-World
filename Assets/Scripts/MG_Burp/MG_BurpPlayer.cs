@@ -45,6 +45,7 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
 
         m_TimeLeft = m_Timeout;
         Debug.Log("m_TimeLeft=" + m_TimeLeft);
+        m_Playing = true;
         StartCoroutine(SpawnAll(goodConversations, badConversations));
 
     }
@@ -123,5 +124,37 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
         }
     }
 
+    bool responed = false;
 
+    public void EndGame()
+    {
+        if (responed)
+        {
+            return;
+        }
+        m_Playing = false;
+        responed = true;
+        ConversationPiece piece = MG_BurpSelector.instance.piece;
+        if (piece == null)
+        {
+            Room.instance.ResponseSilent();
+        } else
+        {
+            Room.instance.Response(piece);
+        }
+    }
+
+    private bool m_Playing = false;
+
+    public void Update()
+    {
+        if (m_Playing) { 
+            m_TimeLeft -= Time.deltaTime;
+            if (m_TimeLeft < 0)
+            {
+                Debug.Log("Timeout");
+                EndGame();
+            }
+        }
+    }
 }
