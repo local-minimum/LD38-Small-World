@@ -6,8 +6,9 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 {    
     public Rigidbody2D m_Asteroid;
     public Rigidbody2D m_Player;
-    public float m_Timeout = 5.0f;
+    public Rigidbody2D m_Conversationoid;
 
+    public float m_Timeout = 10.0f;
     private ConversationGenerator m_ConvGenerator;
     private float m_TimeLeft = 0.0f;
     private bool m_Playing = false;
@@ -35,8 +36,8 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 
     override public void Play(int difficulty)
     {
-        int goodConvCount = 3;
-        int badConvCount = 7;
+        int goodConvCount = 1;
+        int badConvCount = 5;
                 
         var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
         var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, badConvCount);
@@ -65,20 +66,11 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 
     [SerializeField]
     Transform Asteroids;
-
-
-    private void SpawnPlayer()
-    {
-        Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
-        Rigidbody2D clone = (Rigidbody2D)Instantiate(m_Player, transform.position, transform.rotation);
-        clone.transform.position = randomScreenPosition;
-        clone.transform.SetParent(Asteroids);
-    }
-
+    
     private void SpawnObject(Rigidbody2D rigidbody)
     {
         Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
-        Rigidbody2D prefabClone = (Rigidbody2D)Instantiate(rigidbody, transform.position, transform.rotation);
+        Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(rigidbody, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.transform.SetParent(Asteroids);
     }
@@ -86,9 +78,14 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
     private void SpawnConversationoid(ConversationPiece conversationPiece)
     {
         Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
-        Rigidbody2D prefabClone = (Rigidbody2D)Instantiate(m_Asteroid, transform.position, transform.rotation);
+        Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(m_Conversationoid, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.transform.SetParent(Asteroids);
+
+        prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
+
+        Sprite sprite = DialogueDisplayer.instance.GetSpriteFromCategory(conversationPiece.Category);
+        prefabClone.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
     public void Update()

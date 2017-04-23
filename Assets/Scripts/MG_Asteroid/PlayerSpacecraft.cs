@@ -22,10 +22,12 @@ public class PlayerSpacecraft : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Conversationoid")
+        Debug.Log(collision.gameObject.name);
+
+        if (collision.gameObject.name == "Conversationoid(Clone)")
         {
-            //MGAsteroidPlayer.instance.PlayerGotConversationPiece(collision.gameObject.GetComponent<ConversationPiece>()); 
-            Room.instance.Response(collision.gameObject.GetComponent<ConversationPiece>());
+            Debug.Log("Conversationoid!!!!");
+            Room.instance.Response(collision.gameObject.GetComponent<MiniGameConversationObject>().m_ConversationPiece);
             Destroy(collision.gameObject);
         }
     }
