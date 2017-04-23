@@ -212,8 +212,21 @@ Prefab:
     - target: {fileID: 114478767595493798, guid: fa55b1e13c96281498c1a17aff53cf70,
         type: 2}
       propertyPath: m_Text
-      value: I really felt like staying put and not leave the room, but food was running
-        low. And hopefully the store would be pretty empty this time of the day.
+      value: 'I really felt like staying put and not leave the room, but food was
+        running low.
+
+
+        Hopefully the store would be empty this time of the day.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114822035314533412, guid: fa55b1e13c96281498c1a17aff53cf70,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573149846}
+    - target: {fileID: 114822035314533412, guid: fa55b1e13c96281498c1a17aff53cf70,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Continue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa55b1e13c96281498c1a17aff53cf70, type: 2}
@@ -305,7 +318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hilarious awkward social horrror game for LDJAM38
+  m_Text: Awkward social horrror game for LDJAM38
 --- !u!222 &521076618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -797,6 +810,8 @@ GameObject:
   - component: {fileID: 1573149842}
   - component: {fileID: 1573149841}
   - component: {fileID: 1573149840}
+  - component: {fileID: 1573149845}
+  - component: {fileID: 1573149846}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -874,6 +889,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573149845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573149839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a06bad6e223566489a34e9181e3e316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 965414128}
+  delayTitle: 2
+  subTitle: {fileID: 521076617}
+  delaySubtitle: 1
+  delayIntroText: 4
+  preTitlesRemove: 1
+  preDoorOpen: 1
+  anim: {fileID: 1066877766}
+  doorTrigger: Open
+  loadDelay: 2
+  nextScene: DialogueSceneSupermarket
+--- !u!114 &1573149846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1573149839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dbf5e31c0c2e343a5967248c12c237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outro: {fileID: 1926410555}
+--- !u!1 &1926410555 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1890938927687230, guid: fa55b1e13c96281498c1a17aff53cf70,
+    type: 2}
+  m_PrefabInternal: {fileID: 51012802}
 --- !u!1 &1991834182
 GameObject:
   m_ObjectHideFlags: 0

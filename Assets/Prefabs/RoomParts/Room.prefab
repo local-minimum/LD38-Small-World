@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNames:
-  - MGAsteroid
+  - MG_Burp
   miniGameBG: {fileID: 0}
   miniGame: {fileID: 0}
   easeOut:
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   likes: 0600000003000000
   dislikes: 020000000400000001000000
-  icon: {fileID: 21300000, guid: be4b8619363a71c4c98d6be059504a08, type: 3}
+  icon: {fileID: 21300000, guid: 992b59c4ae9fd6e47bab5b871e87f36e, type: 3}
 --- !u!114 &114641576737558768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,11 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Conversation: {fileID: 114041661722775618}
-  selfIcon: {fileID: 21300000, guid: f3ceb37c02e4ad145a2c3d77d9ae7aee, type: 3}
+  selfIcon: {fileID: 21300000, guid: 058056aeb96c3914ea429dbdb1f8eff0, type: 3}
   difficultyLvl: 1
-  convoPieces: 2
+  convoPieces: 4
   otherPiecesThisTurn: 1
-  nextScene: MGAsteroid
+  nextScene: MG_Burp
   delayBeforeProfile: 0.5
   delayBeforeGreet: 2
   delayBeforeHide: 5

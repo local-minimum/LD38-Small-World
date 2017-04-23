@@ -14,6 +14,11 @@ public class RoomOutro : Singleton<RoomOutro> {
     [SerializeField]
     GameObject outro;
 
+    public void Hide()
+    {
+        outro.SetActive(false);
+    }
+
     public void ShowOutro(Action callback)
     {
         _callback = callback;
