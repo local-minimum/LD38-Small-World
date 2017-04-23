@@ -27,21 +27,17 @@ public class MG_Bucket_Selector : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         MG_Bucket_Item item = other.GetComponent<MG_Bucket_Item>();
-        if (item == null || other == selected || !item.speeding)
+        if (item == null || other == selected || !item.speeding || (MG_Bucket_Spawner.instance as MG_Bucket_Spawner).HasSelection)
         {
             return;
         }
 
         if (selected == null)
         {
-            item.speeding = true;
+            item.speeding = false;
             selected = other;
             m_Piece = item.piece;
             StartCoroutine(AnimateSelection(other.transform));
-        }
-        else
-        {
-            Destroy(other.gameObject);
         }
     }
 

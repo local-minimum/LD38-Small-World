@@ -19,10 +19,13 @@ EditorBuildSettings:
     guid: d80cfaa549b15224592d3efbeedf017c
   - enabled: 1
     path: Assets/Scenes/DialogueSceneNorthPole.unity
-    guid: 00000000000000000000000000000000
+    guid: d0a8b2f704139f7429dc1cee97f94512
   - enabled: 1
     path: Assets/Scenes/MGAsteroid.unity
     guid: 325298f3096d6cf4ca550c447afd63d0
   - enabled: 1
     path: Assets/Scenes/MG_Burp.unity
     guid: eb71f30c9aa7d78408ddfabfe556e2b6
+  - enabled: 1
+    path: Assets/Scenes/MG_Bucket.unity
+    guid: 00000000000000000000000000000000

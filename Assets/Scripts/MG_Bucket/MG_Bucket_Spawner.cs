@@ -7,6 +7,25 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
     [SerializeField]
     Transform[] spawnParents;
 
+    [SerializeField]
+    MG_Bucket_Selector[] selectors;
+
+    public bool HasSelection
+    {
+        get
+        {
+            for (int i = 0; i < selectors.Length; i++)
+            {
+                if (selectors[i].HasSelected)
+                {
+                    return true;
+                }
+            }
+            return false;   
+
+        }
+    }
+
     public override void EndGame()
     {
         if (!m_Playing)
@@ -14,7 +33,17 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
             return;
         }
         m_Playing = false;
-        ConversationPiece piece = MG_BurpSelector.instance.SelectedPiece;
+
+        ConversationPiece piece = null;
+        foreach (var selector in selectors)
+        {
+            if (selector.HasSelected)
+            {
+                piece = selector.SelectedPiece;
+                break;
+            }
+        }
+
         if (piece == null)
         {
             Room.instance.ResponseSilent();
@@ -78,7 +107,7 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
             parent = Random.Range(0, spawnParents.Length);
         } else
         {
-            int tmp = Random.Range(0, spawnParents.Length) - 1;
+            int tmp = Random.Range(0, spawnParents.Length - 1);
             if (tmp == notParent)
             {
                 tmp++;
