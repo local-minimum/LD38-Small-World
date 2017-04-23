@@ -8,33 +8,6 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
     [SerializeField]
     Transform spawnParent;
 
-    public float m_Timeout = 5.0f;
-
-    private ConversationGenerator m_ConvGenerator;
-    private float m_TimeLeft = 0.0f;
-
-
-    private void Start()
-    {
-        if (Room.IsInstanciated)
-        {
-            m_ConvGenerator = Room.instance.Conversation;
-        }
-
-        if (m_ConvGenerator == null)
-        {
-            m_ConvGenerator = GetComponent<ConversationGenerator>();
-        }
-
-        StartCoroutine(DelayPlay());
-    }
-
-    IEnumerator<WaitForSeconds> DelayPlay()
-    {
-        yield return new WaitForSeconds(1f);
-        Play(1);
-    }
-
     public override void Play(int difficulty)
     {
         int goodConvCount = 2;
@@ -124,16 +97,13 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
         }
     }
 
-    bool responed = false;
-
-    public void EndGame()
+    public override void EndGame()
     {
-        if (responed)
+        if (!m_Playing)
         {
             return;
         }
         m_Playing = false;
-        responed = true;
         ConversationPiece piece = MG_BurpSelector.instance.piece;
         if (piece == null)
         {
@@ -144,17 +114,4 @@ public class MG_BurpPlayer : MiniGamePlayerBase {
         }
     }
 
-    private bool m_Playing = false;
-
-    public void Update()
-    {
-        if (m_Playing) { 
-            m_TimeLeft -= Time.deltaTime;
-            if (m_TimeLeft < 0)
-            {
-                Debug.Log("Timeout");
-                EndGame();
-            }
-        }
-    }
 }

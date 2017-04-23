@@ -6,32 +6,6 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 {    
     public Rigidbody2D m_Asteroid;
     public Rigidbody2D m_Player;
-    public float m_Timeout = 5.0f;
-
-    private ConversationGenerator m_ConvGenerator;
-    private float m_TimeLeft = 0.0f;
-    private bool m_Playing = false;
-
-    private void Start()
-    {
-        if (Room.IsInstanciated)
-        {
-            m_ConvGenerator = Room.instance.Conversation;
-        }
-        
-        if (m_ConvGenerator == null)
-        {
-            m_ConvGenerator = GetComponent<ConversationGenerator>();
-        }
-
-        StartCoroutine(DelayPlay());
-    }
-    
-    IEnumerator<WaitForSeconds> DelayPlay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Play(3);
-    }
 
     override public void Play(int difficulty)
     {
@@ -77,19 +51,11 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
         prefabClone.transform.SetParent(Asteroids);
-    }
+    }   
 
-    public void Update()
+    public override void EndGame()
     {
-        if (m_Playing)
-        {
-            m_TimeLeft -= Time.deltaTime;
-            if (m_TimeLeft < 0)
-            {
-                Debug.Log("Timeout");
-                Room.instance.ResponseSilent();
-                m_Playing = false;
-            }
-        }
+        m_Playing = false;
+        Room.instance.ResponseSilent();
     }
 }
