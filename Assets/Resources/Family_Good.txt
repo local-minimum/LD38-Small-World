@@ -6,4 +6,3 @@ My child <name> crafted a <adj> <noun.sg> out of <noun.pl>.
 Did you know that <name> and <name> got their [num: 1;10] baby, I don't understand how they can keep it up!
 Have you heard about my <rel> <name-female>, apparently she's <verb.ing> nowadays?
 Have you heard about my <rel> <name-male>, apparently he's <verb.ing> nowadays?
-

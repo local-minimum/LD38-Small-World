@@ -1247,13 +1247,13 @@ MonoBehaviour:
   contentType: {fileID: 1573974418}
   nameField: {fileID: 1037736609}
   dialogueParent: {fileID: 2099461532}
-  familySprite: {fileID: 21300000, guid: 414aceee6fd0b134fa85e232d9892d75, type: 3}
-  foodSprite: {fileID: 21300000, guid: f3ceb37c02e4ad145a2c3d77d9ae7aee, type: 3}
-  memorySprite: {fileID: 21300000, guid: 3b1b0b633a1205644bc5210cda95114f, type: 3}
-  sportsSprite: {fileID: 21300000, guid: 8d4dc659329eea94fac72dd83bcd39fd, type: 3}
-  politicsSprite: {fileID: 21300000, guid: bf2910ec5f37a6842aed41ad1d153a2e, type: 3}
-  weatherSprite: {fileID: 21300000, guid: 654ccd7e537765f4ea9ee49f2a7d7a39, type: 3}
-  workSprite: {fileID: 21300000, guid: c1b40f956a6e4d043a6ae39ba9f688c9, type: 3}
+  familySprite: {fileID: 21300000, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  foodSprite: {fileID: 21300002, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  memorySprite: {fileID: 21300006, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  sportsSprite: {fileID: 21300004, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  politicsSprite: {fileID: 21300010, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  weatherSprite: {fileID: 21300008, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  workSprite: {fileID: 21300012, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
 --- !u!114 &1087060009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,7 +1420,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 904, y: 565}
+  m_SizeDelta: {x: 753, y: 471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179636663
 MonoBehaviour:

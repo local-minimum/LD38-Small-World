@@ -1113,13 +1113,13 @@ MonoBehaviour:
   contentType: {fileID: 1586520099}
   nameField: {fileID: 1586520102}
   dialogueParent: {fileID: 1586520101}
-  familySprite: {fileID: 21300000, guid: 414aceee6fd0b134fa85e232d9892d75, type: 3}
-  foodSprite: {fileID: 21300000, guid: f3ceb37c02e4ad145a2c3d77d9ae7aee, type: 3}
-  memorySprite: {fileID: 21300000, guid: 3b1b0b633a1205644bc5210cda95114f, type: 3}
-  sportsSprite: {fileID: 21300000, guid: 8d4dc659329eea94fac72dd83bcd39fd, type: 3}
-  politicsSprite: {fileID: 21300000, guid: bf2910ec5f37a6842aed41ad1d153a2e, type: 3}
-  weatherSprite: {fileID: 21300000, guid: 654ccd7e537765f4ea9ee49f2a7d7a39, type: 3}
-  workSprite: {fileID: 21300000, guid: c1b40f956a6e4d043a6ae39ba9f688c9, type: 3}
+  familySprite: {fileID: 21300000, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  foodSprite: {fileID: 21300002, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  memorySprite: {fileID: 21300006, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  sportsSprite: {fileID: 21300004, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  politicsSprite: {fileID: 21300010, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  weatherSprite: {fileID: 21300008, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
+  workSprite: {fileID: 21300012, guid: 5e0c1fbe0fcea0144b22a7e4be9224ca, type: 3}
 --- !u!114 &1439486546
 MonoBehaviour:
   m_ObjectHideFlags: 0
