@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneNames:
-  - SigridDevScene
+  - MGAsteroid
   miniGameBG: {fileID: 0}
   miniGame: {fileID: 0}
   easeOut:
@@ -121,7 +121,7 @@ MonoBehaviour:
   difficultyLvl: 1
   convoPieces: 2
   otherPiecesThisTurn: 1
-  nextScene: SigridDevScene
+  nextScene: MGAsteroid
   delayBeforeProfile: 0.5
   delayBeforeGreet: 2
   delayBeforeHide: 5

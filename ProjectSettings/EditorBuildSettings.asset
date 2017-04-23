@@ -12,5 +12,5 @@ EditorBuildSettings:
     path: Assets/Scenes/DialogueScenePub.unity
     guid: c9700ccd59e8c864980aba5105c56218
   - enabled: 1
-    path: Assets/Scenes/SigridDevScene.unity
+    path: Assets/Scenes/MGAsteroid.unity
     guid: 325298f3096d6cf4ca550c447afd63d0
