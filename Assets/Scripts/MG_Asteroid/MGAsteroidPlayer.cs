@@ -8,18 +8,6 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
     public Rigidbody2D m_Player;
     public Rigidbody2D m_Conversationoid;
 
-    private void Start()
-    {
-        if (Room.IsInstanciated)
-        {
-            m_ConvGenerator = Room.instance.Conversation;
-        }
-        
-        if (m_ConvGenerator == null)
-        {
-            m_ConvGenerator = GetComponent<ConversationGenerator>();
-        }
-    }
 
     override public void Play(int difficulty)
     {

@@ -99,6 +99,11 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
 
     IEnumerator<WaitForSeconds> FadeIn()
     {
+        miniGameBG.raycastTarget = true;
+        miniGame.raycastTarget = true;
+        miniGame.enabled = true;
+        miniGameBG.color = loadedColor;
+
         bool ready = false;
         while (!ready)
         {
@@ -108,10 +113,6 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
         MiniGameControllerUI.instance.Show(MiniGamePlayerBase.instance.controllers);
         yield return new WaitForSeconds(easeOutDuration);
-        miniGameBG.raycastTarget = true;
-        miniGame.raycastTarget = true;
-        miniGame.enabled = true;
-        miniGameBG.color = loadedColor;
         MiniGamePlayerBase.instance.Play(Room.instance.Difficulty);
     }
 
