@@ -53,6 +53,7 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
 
         if (autoPlay)
         {
+            gameObject.AddComponent<AudioListener>();
             StartCoroutine(DelayPlay());
         }
         else {

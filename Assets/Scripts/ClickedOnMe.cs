@@ -50,6 +50,7 @@ public class ClickedOnMe : MonoBehaviour {
     virtual protected void Clicked()
     {
         Debug.Log("Destroying " + name);
+        MiniGameAudioEffector.instance.EmitRandomSound();
         Destroy(gameObject);
     }
 }

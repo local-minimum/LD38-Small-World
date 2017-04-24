@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AccelerationForce: 2
   m_RotationForce: 0.1
+  soundThreshold: 0.1
 --- !u!212 &212612135838189814
 SpriteRenderer:
   m_ObjectHideFlags: 1

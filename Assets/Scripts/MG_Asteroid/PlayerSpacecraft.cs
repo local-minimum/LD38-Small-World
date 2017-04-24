@@ -5,6 +5,7 @@ public class PlayerSpacecraft : MonoBehaviour
     public float m_AccelerationForce = 10.0f;
     public float m_RotationForce = 10.0F;
 
+    public float soundThreshold = 0.2f;
     private Rigidbody2D m_RigidBody;
 
     private void Start()
@@ -17,6 +18,10 @@ public class PlayerSpacecraft : MonoBehaviour
         float rotation = -Input.GetAxis("Horizontal");
         m_RigidBody.AddTorque(rotation * m_RotationForce);
         float acceleration = Input.GetAxis("Vertical");
+        if (Mathf.Abs(acceleration) > soundThreshold)
+        {
+            MiniGameAudioEffector.instance.EmitRandomSound();
+        }
         m_RigidBody.AddForce(transform.right * acceleration * m_AccelerationForce);
     }
     

@@ -21,6 +21,7 @@ public class MG_Bucket_HandCollision : MonoBehaviour {
             Rigidbody2D rb = item.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.up * 5 + Vector2.right * Random.Range(-2f, 2f);
             item.gameObject.layer = toLayer;
+            MiniGameAudioEffector.instance.EmitRandomSound();
         }
     }
 }
