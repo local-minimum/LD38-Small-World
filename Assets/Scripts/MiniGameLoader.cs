@@ -99,7 +99,12 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
 
     IEnumerator<WaitForSeconds> FadeIn()
     {
-        yield return new WaitForSeconds(0.01f);
+        bool ready = false;
+        while (!ready)
+        {
+            yield return new WaitForSeconds(0.02f);
+            ready = MiniGamePlayerBase.IsInstanciated && MiniGamePlayerBase.instance.isActiveAndEnabled;
+        }
         MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
         MiniGameControllerUI.instance.Show(MiniGamePlayerBase.instance.controllers);
         yield return new WaitForSeconds(easeOutDuration);

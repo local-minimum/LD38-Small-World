@@ -52,6 +52,9 @@ namespace LocalMinimum
             if (_instance != null && _instance != this)
             {
                 Destroy(this);
+            } else
+            {
+                _instance = GetComponent<T>();
             }
         }
     }

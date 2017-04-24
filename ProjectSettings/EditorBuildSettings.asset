@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/DialogueTest.unity
+    guid: 2cb4e979713828448995279e524f6de4
+  - enabled: 1
     path: Assets/Scenes/ApartmentStart.unity
     guid: df55264813987b94b881b36ce354f36e
   - enabled: 1
@@ -28,4 +31,4 @@ EditorBuildSettings:
     guid: eb71f30c9aa7d78408ddfabfe556e2b6
   - enabled: 1
     path: Assets/Scenes/MG_Bucket.unity
-    guid: 00000000000000000000000000000000
+    guid: 2a62a95dd92d2b74f879df5efb8fe645
