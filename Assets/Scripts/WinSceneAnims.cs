@@ -25,6 +25,11 @@ public class WinSceneAnims : MonoBehaviour {
 
     [SerializeField]
     float loadCredAt;
+
+    [SerializeField]
+    float blaFrom;
+
+    
 	void Start () {
 		for (int i=0; i<frenemies.Length; i++)
         {
@@ -33,8 +38,19 @@ public class WinSceneAnims : MonoBehaviour {
 
         StartCoroutine(ShowWelcome());
         StartCoroutine(LoadCred());
+        StartCoroutine(Bla());
 	}
 
+    IEnumerator<WaitForSeconds> Bla()
+    {
+        yield return new WaitForSeconds(blaFrom);
+        while (true)
+        {
+            SpeakerSystem.instance.Bla();
+            yield return new WaitForSeconds(0.15f);
+
+        }
+    }
     IEnumerator<WaitForSeconds> DelayEntry(Animator anim, float delay)
     {
         yield return new WaitForSeconds(delay);

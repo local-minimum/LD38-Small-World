@@ -35,6 +35,7 @@ public class HomeIntroScene : MonoBehaviour {
 
     IEnumerator<WaitForSeconds> RunIntro()
     {
+        SpeakerSystem.instance.FadeToWorld();
         bgField.SetActive(false);
         Color titleColor = title.color;
         title.color = new Color(titleColor.r, titleColor.g, titleColor.b, 0);

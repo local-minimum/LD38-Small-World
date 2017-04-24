@@ -41,6 +41,7 @@ public class PlayerSpacecraft : MonoBehaviour
         {
             collided = true;
             MiniGamePlayerBase.instance.Playing = false;
+            collision.otherCollider.enabled = false;
             StartCoroutine(delayDestroy(collision.gameObject.GetComponent<MiniGameConversationObject>().m_ConversationPiece));
         }
     }

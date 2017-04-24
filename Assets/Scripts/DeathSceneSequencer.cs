@@ -49,7 +49,7 @@ public class DeathSceneSequencer : MonoBehaviour {
         while (Time.timeSinceLevelLoad - startTime < duration && maxSpawn > 0)
         {
             float progress = (Time.timeSinceLevelLoad - startTime) / duration;
-
+            MiniGameAudioEffector.instance.EmitRandomSound();
             spawn = GetSpawn();
             SetSize(spawn, progress);
             SetRotation(spawn);
@@ -62,6 +62,7 @@ public class DeathSceneSequencer : MonoBehaviour {
 
         while (Time.timeSinceLevelLoad - startTime < duration)
         {
+            MiniGameAudioEffector.instance.EmitRandomSound();
             yield return new WaitForSeconds(spawnSpeed);
         }
         SceneManager.LoadScene(startScene);
