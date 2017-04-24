@@ -2,16 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using LocalMinimum.Collections;
 
 public class PersonProfile : MonoBehaviour {
 
     public ConversationQuality genderEncoding;
 
-	[SerializeField]
-	public List<ConversationCategory> likes;
+    [SerializeField]
+    int nLikes = 2;
 
-	[SerializeField]
-	public List<ConversationCategory> dislikes;
+    List<ConversationCategory> m_likes;
+	public List<ConversationCategory> likes
+    {
+        get
+        {
+            if (m_likes == null)
+            {
+                SelectLikesDislikes();
+            }
+            return m_likes;
+        }
+    }
+
+    [SerializeField]
+    int nDislikes = 3;
+
+    List<ConversationCategory> m_dislikes;
+    public List<ConversationCategory> dislikes
+    {
+        get
+        {
+            if (m_likes == null)
+            {
+                SelectLikesDislikes();
+            }
+            return m_dislikes;
+        }
+    }
+
+    void SelectLikesDislikes()
+    {
+        List<ConversationCategory> availible = new List<ConversationCategory>() {
+
+            ConversationCategory.Family,
+            ConversationCategory.Food,
+            ConversationCategory.Nostalgy,
+            ConversationCategory.Politics,
+            ConversationCategory.Sport,
+            ConversationCategory.Weather,
+            ConversationCategory.Work
+        };
+
+        availible = availible.Shuffle(new System.Random(Mathf.RoundToInt(Time.realtimeSinceStartup * 100f)));
+
+        m_likes = availible.Where((e, i) => i < nLikes).ToList();
+        m_dislikes = availible.Where((e, i) => i >= nLikes).Where((e, i) => i < nDislikes).ToList();
+    }
 
 	public ConversationCategory GetRandomCategory(ConversationQuality quality) {
 		switch (quality) {

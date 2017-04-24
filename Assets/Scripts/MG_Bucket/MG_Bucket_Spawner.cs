@@ -79,7 +79,7 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
     IEnumerator<WaitForSeconds> SpawnAll(List<ConversationPiece> Goodies, List<ConversationPiece> Baddies)
     {
         Goodies.AddRange(Baddies);
-        var All = Goodies.Shuffle(new System.Random(Mathf.RoundToInt(Time.time)));
+        var All = Goodies.Shuffle(new System.Random(Mathf.RoundToInt(Time.realtimeSinceStartup * 100f)));
         foreach (var piece in All)
         {
             int parent = -1;
