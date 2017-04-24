@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212947005722538556}
   - component: {fileID: 61453391959826162}
   - component: {fileID: 50601185602834860}
-  - component: {fileID: 114104019535646638}
   - component: {fileID: 114320250047615640}
   m_Layer: 0
   m_Name: politics
@@ -89,20 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &114104019535646638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1448822387129658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231aaaef56bbfcf48abc5177f7c2e3c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickLayer:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &114320250047615640
 MonoBehaviour:
   m_ObjectHideFlags: 1

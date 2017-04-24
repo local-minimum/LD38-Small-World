@@ -249,6 +249,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 114647373573165016, guid: fd3c50b4f0a1f644781335a04bdbdb9d,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145830007479752, guid: fd3c50b4f0a1f644781335a04bdbdb9d,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd3c50b4f0a1f644781335a04bdbdb9d, type: 2}
   m_IsPrefabParent: 0

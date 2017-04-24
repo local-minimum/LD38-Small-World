@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212275059558319314}
   - component: {fileID: 61973674642293398}
   - component: {fileID: 50496172497381716}
-  - component: {fileID: 114812599100806024}
   - component: {fileID: 114618620073785688}
   m_Layer: 0
   m_Name: food
@@ -102,20 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   speeding: 1
---- !u!114 &114812599100806024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1169727407970736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231aaaef56bbfcf48abc5177f7c2e3c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickLayer:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!212 &212275059558319314
 SpriteRenderer:
   m_ObjectHideFlags: 1

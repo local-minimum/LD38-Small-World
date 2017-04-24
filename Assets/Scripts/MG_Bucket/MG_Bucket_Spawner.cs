@@ -64,6 +64,17 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
         var goodConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Good, goodConvCount);
         var badConversations = m_ConvGenerator.GenerateConversations(ConversationQuality.Bad, ConversationQuality.Good, badConvCount);
 
+        MG_Bucket_Hand[] hands = FindObjectsOfType<MG_Bucket_Hand>().Shuffle(new System.Random(Mathf.RoundToInt(Time.realtimeSinceStartup * 100)));
+        for (int i=0; i<hands.Length; i++)
+        {
+            if (i == 0)
+            {
+                hands[i].HandOn();
+            } else
+            {
+                hands[i].HandOff();
+            }
+        }
         m_TimeLeft = m_Timeout;
         Debug.Log("m_TimeLeft=" + m_TimeLeft);
         m_Playing = true;

@@ -52,12 +52,12 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
     }
 
 
-    float distanceToCenter = 0.5f;
+    float distanceToCenter = 0.6f;
 
     Vector3 GetConversationoidPos()
     {
         float d = 0.5f - distanceToCenter / 2f;
-        Vector3 screenPos = new Vector3(Random.Range(d, 1) * Screen.width, Random.Range(d, 1) * Screen.height, Camera.main.farClipPlane / 2);
+        Vector3 screenPos = new Vector3(Random.Range(0, d) * Screen.width, Random.Range(0, d) * Screen.height, Camera.main.farClipPlane / 2);
         
         if (Random.value < 0.5f) {
             screenPos.x = Screen.width - screenPos.x;

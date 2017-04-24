@@ -47,7 +47,7 @@ public class MG_Bucket_Hand : MonoBehaviour {
 
     void Update()
     {
-        if (isOn && Input.GetButtonDown("Horizontal") && Time.timeSinceLevelLoad - lastUpdate > speed)
+        if (isOn && Input.GetButtonDown("Horizontal") && Time.realtimeSinceStartup - lastUpdate > speed)
         {
             if (Input.GetAxisRaw("Horizontal") > 0)
             {
@@ -55,13 +55,13 @@ public class MG_Bucket_Hand : MonoBehaviour {
                 {
                     HandOff();
                     right.HandOn();
-                    lastUpdate = Time.timeSinceLevelLoad;
+                    lastUpdate = Time.realtimeSinceStartup;
                 } 
             } else if (left)
             {
                 HandOff();
                 left.HandOn();
-                lastUpdate = Time.timeSinceLevelLoad;
+                lastUpdate = Time.realtimeSinceStartup;
             }
         }
     }

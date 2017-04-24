@@ -174,21 +174,19 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 32
-    m_FontStyle: 3
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 52
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'I really felt like staying put and not leave the room, but food was running
-    low.
-
-
-    Hopefully the store would be empty this time of the day.'
+  m_Text: "So tired.\nI really don\u2019t feel like going out, but some food would
+    be nice. The store will probably be empty at this hour.\nI really don\u2019t want
+    to run into anyone I know...\r"
 --- !u!114 &114542822376611790
 MonoBehaviour:
   m_ObjectHideFlags: 1
