@@ -1411,6 +1411,17 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114478767595493798, guid: fa55b1e13c96281498c1a17aff53cf70,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Is nowhere safe from people?
+
+        I give up.
+
+        The world is too small.
+
+        I should probably just go home. Maybe then I can rest in solitude.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa55b1e13c96281498c1a17aff53cf70, type: 2}
   m_IsPrefabParent: 0

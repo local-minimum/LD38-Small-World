@@ -1560,6 +1560,13 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114478767595493798, guid: fa55b1e13c96281498c1a17aff53cf70,
+        type: 2}
+      propertyPath: m_Text
+      value: "Here too\u203D\nDo I need to go to the most extreme and isolated place
+        I can think of?\nThe North Pole? Ice and snow, and no people as far as the
+        eye can see. That sounds like a real vacation!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa55b1e13c96281498c1a17aff53cf70, type: 2}
   m_IsPrefabParent: 0
