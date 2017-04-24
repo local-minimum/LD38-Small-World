@@ -1306,6 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adceef711e739c4ead28d08140fdce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_destroyGameObject: 0
   iconImage: {fileID: 1618969347}
   dialogueText: {fileID: 1662638281}
   contentType: {fileID: 1573974418}
@@ -1329,6 +1330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0b127f31506fb4ebd441794d33d076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_destroyGameObject: 0
   parent: {fileID: 228761015}
   likes: {fileID: 1357673613}
   dislikes: {fileID: 1173147374}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerSpacecraft : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class PlayerSpacecraft : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (collided)
+        {
+            return;
+        }
+
         float rotation = -Input.GetAxis("Horizontal");
         m_RigidBody.AddTorque(rotation * m_RotationForce);
         float acceleration = Input.GetAxis("Vertical");
@@ -24,17 +30,29 @@ public class PlayerSpacecraft : MonoBehaviour
         }
         m_RigidBody.AddForce(transform.right * acceleration * m_AccelerationForce);
     }
-    
+
+    bool collided = false;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
 
         if (collision.gameObject.name == "Conversationoid(Clone)")
         {
-            Debug.Log("Conversationoid!!!!");
-            Room.instance.Response(collision.gameObject.GetComponent<MiniGameConversationObject>().m_ConversationPiece);
-            Destroy(collision.gameObject);
+            collided = true;
+            MiniGamePlayerBase.instance.Playing = false;
+            StartCoroutine(delayDestroy(collision.gameObject.GetComponent<MiniGameConversationObject>().m_ConversationPiece));
         }
+    }
+
+    IEnumerator<WaitForSeconds> delayDestroy(ConversationPiece piece)
+    {
+        MiniGameAudioEffector.instance.EmitRandomSelectSound();
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Conversationoid!!!!");
+        Room.instance.Response(piece);
+        
+
     }
 }
 

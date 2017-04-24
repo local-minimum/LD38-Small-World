@@ -37,6 +37,7 @@ public class MG_BurpSelector : Singleton<MG_BurpSelector> {
         {
             selected = other;
             m_Piece = item.piece;
+            MiniGameAudioEffector.instance.EmitRandomSelectSound();
             StartCoroutine(AnimateSelection(other.transform));
         } else
         {

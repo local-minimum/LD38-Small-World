@@ -38,6 +38,7 @@ public class MG_Bucket_Selector : MonoBehaviour {
             selected = other;
             m_Piece = item.piece;
             StartCoroutine(AnimateSelection(other.transform));
+            MiniGameAudioEffector.instance.EmitRandomSelectSound();
         }
     }
 

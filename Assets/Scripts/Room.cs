@@ -65,7 +65,7 @@ public class Room : Singleton<Room> {
     public void Response(ConversationPiece response)
     {
         SpeakerSystem.instance.FadeToWorld();
-        SpeakerSystem.instance.Bla();
+        //SpeakerSystem.instance.Bla();
         mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();

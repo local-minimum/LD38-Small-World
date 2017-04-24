@@ -133,6 +133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69198e878c4eb3c4ea38be99aa1f7d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_destroyGameObject: 0
+  music: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: 172bd9d416838b34ea0cde022e9ded27, type: 3}
-  refuseDuration: 0.3
+  selectSounds:
+  - {fileID: 8300000, guid: 892ec651971bd61459f650d03833e16d, type: 3}
+  - {fileID: 8300000, guid: e1fb81a80f1557741a23374d0c71eaa3, type: 3}
+  timeBetweenEmits: 0.15

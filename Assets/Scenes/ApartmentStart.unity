@@ -442,6 +442,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114343709988638616, guid: 9c3a0ebaa01af5940837d2fecdbd9e1c,
+        type: 2}
+      propertyPath: blablas.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 87d279723b5a30f47bd96fa8920a404b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c3a0ebaa01af5940837d2fecdbd9e1c, type: 2}
   m_IsPrefabParent: 0

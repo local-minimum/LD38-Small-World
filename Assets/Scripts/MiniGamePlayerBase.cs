@@ -72,6 +72,13 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
     public bool Playing
     {
         get { return m_Playing; }
+
+        set {
+            if (!value)
+            {
+                m_Playing = false;
+            }
+        }
     }
 
     public abstract void EndGame();    

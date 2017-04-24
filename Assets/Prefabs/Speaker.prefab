@@ -501,7 +501,7 @@ MonoBehaviour:
   worldEffectSpeaker: {fileID: 82359162095337700}
   worldMusicSpeaker: {fileID: 82699998665224912}
   blablas:
-  - {fileID: 8300000, guid: 892ec651971bd61459f650d03833e16d, type: 3}
+  - {fileID: 8300000, guid: b00f014987f1a924f9d262c019ba2702, type: 3}
   - {fileID: 8300000, guid: 080c0f2443654a943974828b7a4f5155, type: 3}
   - {fileID: 8300000, guid: e1fb81a80f1557741a23374d0c71eaa3, type: 3}
   - {fileID: 8300000, guid: 827ba24972deae34094786104982c5fd, type: 3}
