@@ -1,4 +1,4 @@
-I don't like sports.
+I'm not interested in sports, it's all too <adj> for my taste.
 I hate <activity-sport>!
-Why would anyone ever watch <activity-sport>?
+Why would anyone ever watch <activity-sport>? I'd rather watch <noun.pl> <verb.ing>. 
 I just think <activity-sport> is a waste of time.

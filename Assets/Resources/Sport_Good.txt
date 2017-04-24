@@ -1,6 +1,7 @@
 Do you like to play <activity-sport>?
 I love to watch a good game of <activity-sport>.
-Playing <activity-sport> is <adj-cp1>
+Playing <activity-sport> is <adj-cp1>.
 I feel so <adj-emotion> when watching a game of <activity-sport>. I love it!
 Did you see the <activity-sport> game yesterday? Amazing!
 I sure love <activity-sport>, both to watch and to play.
+I used to be a real <activity-sport> champion when I was younger. 
