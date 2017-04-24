@@ -42,6 +42,7 @@ public class Room : Singleton<Room> {
     bool otherHappy;
 
     public void Greet() {
+        HealthUI.instance.ShowHealthBar();
         otherHappy = true;
         frenemyCat = ConversationCategory.Greeting;
         DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, false, ConversationCallbackMe);
@@ -55,6 +56,7 @@ public class Room : Singleton<Room> {
     {
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
+        HealthUI.instance.ShowHealthBar();
         playerCat = response.Category;
         if (_Conversation.currentPerson.likes.Contains(response.Category))
         {
@@ -70,13 +72,13 @@ public class Room : Singleton<Room> {
             otherPiecesThisTurn = 2;
         }
         DialogueDisplayer.instance.ShowDialogue(response, selfIcon, true, ConversationCallbackMe);
-
     }
 
     public void ResponseSilent()
     {
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
+        HealthUI.instance.ShowHealthBar();
         otherHappy = false;
         playerCat = ConversationCategory.Silent;
         difficultyLvl++;
@@ -116,6 +118,7 @@ public class Room : Singleton<Room> {
                 piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
                 frenemyCat = ConversationCategory.Silent;
             }
+            HealthUI.instance.Increase();
             otherHappy = true;
         }
         else if (playerCat == frenemyCat)
@@ -139,6 +142,7 @@ public class Room : Singleton<Room> {
         convoPieces--;
         if (convoPieces > 0)
         {
+            HealthUI.instance.HideHealthBar();
             MiniGameLoader.instance.LoadRandom();
         } else
         {
