@@ -29,3 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MG_Bucket.unity
     guid: 2a62a95dd92d2b74f879df5efb8fe645
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 3f13faedc608ea143906af1e9967af9e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 19e897869b6e03449bb2d8908758678f
