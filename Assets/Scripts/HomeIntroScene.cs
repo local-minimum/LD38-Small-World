@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HomeIntroScene : MonoBehaviour {
+
+    [SerializeField]
+    float timeBeforeBG;
+
+    [SerializeField]
+    GameObject bgField;
+
     [SerializeField]
     Text title;
 
@@ -22,16 +29,20 @@ public class HomeIntroScene : MonoBehaviour {
 
     void Start()
     {
+        HealthUI.ResetHealth();
         StartCoroutine(RunIntro());
     }
 
     IEnumerator<WaitForSeconds> RunIntro()
     {
+        bgField.SetActive(false);
         Color titleColor = title.color;
         title.color = new Color(titleColor.r, titleColor.g, titleColor.b, 0);
         Color subTitleColor = subTitle.color;
         subTitle.color = new Color(subTitleColor.r, subTitleColor.g, subTitleColor.b, 0);
 
+        yield return new WaitForSeconds(timeBeforeBG);
+        bgField.SetActive(true);
         yield return new WaitForSeconds(delayTitle);
         title.color = titleColor;
         yield return new WaitForSeconds(delaySubtitle);
@@ -68,6 +79,7 @@ public class HomeIntroScene : MonoBehaviour {
         yield return new WaitForSeconds(preTitlesRemove);
         title.enabled = false;
         subTitle.enabled = false;
+        bgField.SetActive(false);
         yield return new WaitForSeconds(preDoorOpen);
         anim.SetTrigger(doorTrigger);
         yield return new WaitForSeconds(loadDelay);

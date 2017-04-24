@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using LocalMinimum;
+using UnityEngine.UI;
 
 
 public class RoomOutro : Singleton<RoomOutro> {
@@ -31,7 +32,8 @@ public class RoomOutro : Singleton<RoomOutro> {
         if (displaying)
         {
             displaying = false;
-            //outro.SetActive(false);
+            outro.GetComponentInChildren<Button>().gameObject.SetActive(false);
+            
             if (_callback != null)
             {
                 _callback();

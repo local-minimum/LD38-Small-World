@@ -45,6 +45,13 @@ public class ProfileViewer : Singleton<ProfileViewer> {
     [SerializeField]
     ProfileItem workPrefab;
 
+    public bool ShowingProfile
+    {
+        get
+        {
+            return parent.gameObject.activeSelf;
+        }
+    }
 
     public void ShowProfile(PersonProfile profile)
     {
