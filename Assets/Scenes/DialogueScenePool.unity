@@ -290,6 +290,11 @@ Prefab:
       propertyPath: mouthAnim
       value: 
       objectReference: {fileID: 854115236}
+    - target: {fileID: 114641576737558768, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: delayBeforeProfile
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
   m_IsPrefabParent: 0
@@ -488,6 +493,7 @@ GameObject:
   - component: {fileID: 898596364}
   - component: {fileID: 898596363}
   - component: {fileID: 898596365}
+  - component: {fileID: 898596366}
   m_Layer: 0
   m_Name: Frenemy
   m_TagString: Untagged
@@ -558,6 +564,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3e13899beea034690534ddff67dec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &898596366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898596361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e6a8df0c7bb5c44e866286b5859b8c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &905237125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1444,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1946858462154746, guid: 11bb55f825b6acd4992c0de044fd2bc2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11bb55f825b6acd4992c0de044fd2bc2, type: 2}
