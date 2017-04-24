@@ -769,7 +769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A game made for Ludum Dare 38
+  m_Text: (Click on names for more info)
 --- !u!222 &669308491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1953,7 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd09670acd2f03c468ffb615d2f2964f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkURI: 
+  linkURI: https://ldjam.com/users/higipha
 --- !u!114 &1734912824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2000,7 +2000,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '  Sigrid: Code'
+  m_Text: '  HigiPha: Code'
 --- !u!222 &1734912826
 CanvasRenderer:
   m_ObjectHideFlags: 0
