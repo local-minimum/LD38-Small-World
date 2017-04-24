@@ -2,4 +2,4 @@ Don't remind me!
 Don't dwell on the past, carpe diem!
 Who cares, that's long forgotten now.
 I couldn't care less. I live in the moment.
-I have amnesia I can only remember the last [num: 2;60] minutes.
+I have amnesia I can only remember the last 20 minutes.

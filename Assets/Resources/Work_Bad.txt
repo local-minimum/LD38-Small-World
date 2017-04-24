@@ -1,4 +1,4 @@
-Don't remind me! I got fired from my job [num: 2;12] weeks ago.
+Don't remind me! I got fired from my job 4 weeks ago.
 Don't remind me! I got fired from my <noun.sg> job.
 I'm stuck in my dead-end <noun.sg> job.
 I hate working at the <noun.sg> factory.
