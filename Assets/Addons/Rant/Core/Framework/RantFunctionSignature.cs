@@ -117,7 +117,7 @@ namespace Rant.Core.Framework
                     Description = paramDescription
                 };
             }
-            _delegate = Witchcraft.Create(method);
+       //    _delegate = Witchcraft.Create(method);
             Name = name;
             Description = description;
         }
