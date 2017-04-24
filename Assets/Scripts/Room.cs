@@ -39,9 +39,18 @@ public class Room : Singleton<Room> {
     [SerializeField]
     int otherPiecesThisTurn = 1;
 
+    [SerializeField]
+    Animator mouthAnim;
+
+    [SerializeField]
+    string talkTrigger = "Talk";
+
+    [SerializeField]
+    string noTalkTrigger = "NoTalk";
     bool otherHappy;
 
     public void Greet() {
+        mouthAnim.SetTrigger(talkTrigger);
         HealthUI.instance.ShowHealthBar();
         otherHappy = true;
         frenemyCat = ConversationCategory.Greeting;
@@ -54,6 +63,7 @@ public class Room : Singleton<Room> {
 
     public void Response(ConversationPiece response)
     {
+        mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
         HealthUI.instance.ShowHealthBar();
@@ -76,6 +86,7 @@ public class Room : Singleton<Room> {
 
     public void ResponseSilent()
     {
+        mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
         HealthUI.instance.ShowHealthBar();
@@ -90,6 +101,7 @@ public class Room : Singleton<Room> {
     {
         otherPiecesThisTurn--;
         ConversationPiece piece = GetPiece();
+        mouthAnim.SetTrigger(talkTrigger);
         if (HealthUI.IsDead)
         {
             DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, DeathCallback);

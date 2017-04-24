@@ -994,6 +994,7 @@ GameObject:
   - component: {fileID: 1348439429}
   - component: {fileID: 1348439428}
   - component: {fileID: 1348439430}
+  - component: {fileID: 1348439431}
   m_Layer: 5
   m_Name: Man
   m_TagString: Untagged
@@ -1064,6 +1065,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3e13899beea034690534ddff67dec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1348439431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1348439426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e803a04b583aa247bc71dec5d480ce0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1385680509 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114040109576318318, guid: fd3c50b4f0a1f644781335a04bdbdb9d,
@@ -1172,6 +1190,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946858462154746, guid: 11bb55f825b6acd4992c0de044fd2bc2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11bb55f825b6acd4992c0de044fd2bc2, type: 2}
@@ -1580,6 +1602,16 @@ Prefab:
         type: 2}
       propertyPath: SceneNames.Array.data[2]
       value: MGAsteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 114641576737558768, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: mouthAnim
+      value: 
+      objectReference: {fileID: 1656999182}
+    - target: {fileID: 114641576737558768, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1,
+        type: 2}
+      propertyPath: delayBeforeProfile
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
