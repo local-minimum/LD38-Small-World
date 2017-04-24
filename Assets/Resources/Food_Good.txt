@@ -1,7 +1,7 @@
 I just love <noun.pl-food>!
 Isn't <noun.pl-food> the best!
 I'm on this new <noun> diet, all I eat is <adj> <noun.pl-food>.
-With my all natural <noun> diet i have so much more energy to <verb>.
+With my all natural <noun> diet I have so much more energy to <verb>.
 Would you like to come to dinner and eat some <noun.pl-food>?
 Right now I'm starving for some <noun.sg-food>.
 Right now I'm starving for some <adj> <noun.sg-food>.
