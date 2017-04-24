@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4374464183362114}
   - component: {fileID: 212003707780483446}
   - component: {fileID: 50362534300009688}
-  - component: {fileID: 58014690291654766}
   - component: {fileID: 114393332301371806}
   - component: {fileID: 114181868265546528}
   - component: {fileID: 114654540214510054}
+  - component: {fileID: 68617072964019460}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1210599652923918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4406645, y: -0.82557374, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -65,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58014690291654766
-CircleCollider2D:
+--- !u!68 &68617072964019460
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -78,8 +78,22 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.3
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.19643927, y: -0.0497092}
+  - {x: -0.28960133, y: 0.05781758}
+  - {x: -0.2837565, y: 0.18640935}
+  - {x: -0.15437603, y: 0.29658926}
+  - {x: 0.109279156, y: 0.28753805}
+  - {x: 0.2045021, y: 0.14601618}
+  - {x: 0.2916124, y: 0.056723237}
+  - {x: 0.25090575, y: -0.034983695}
+  - {x: 0.28787446, y: -0.09347212}
+  - {x: 0.14616966, y: -0.14611399}
+  - {x: 0.047287703, y: -0.31139845}
+  - {x: -0.29744315, y: -0.25392383}
+  - {x: -0.21365142, y: -0.1553005}
+  - {x: -0.20951891, y: -0.033139467}
 --- !u!114 &114181868265546528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29d48866f98ed064d94fc44d443f7c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fbbd7bfe5125d04ba2373a7416c2ca9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

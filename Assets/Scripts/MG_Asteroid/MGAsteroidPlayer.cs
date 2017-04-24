@@ -20,7 +20,7 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 
         m_TimeLeft = m_Timeout;
 
-        SpawnObject(m_Player);
+        SpawnObject(m_Player).position = Vector3.zero;
 
         for (int i = 0; i < 5; i++)
         {
@@ -42,12 +42,13 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
     [SerializeField]
     Transform Asteroids;
     
-    private void SpawnObject(Rigidbody2D rigidbody)
+    private Transform SpawnObject(Rigidbody2D rigidbody)
     {
         Vector3 randomScreenPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range(0, Screen.width), Random.Range(0, Screen.height), Camera.main.farClipPlane / 2));
         Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(rigidbody, transform.position, transform.rotation);
         prefabClone.transform.position = randomScreenPosition;
         prefabClone.transform.SetParent(Asteroids);
+        return prefabClone.transform;
     }
 
     private void SpawnConversationoid(ConversationPiece conversationPiece)
