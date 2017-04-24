@@ -66,9 +66,9 @@ public class SpeakerSystem : Singleton<SpeakerSystem> {
 
     public bool PlayMinigameEffect(AudioClip clip, float refuseDuration)
     {
-        if (Time.timeSinceLevelLoad - lastRefuseMinigame > refuseDuration)
+        if (Time.realtimeSinceStartup - lastRefuseMinigame > refuseDuration)
         {
-            lastRefuseMinigame = Time.timeSinceLevelLoad;
+            lastRefuseMinigame = Time.realtimeSinceStartup;
             miniGameEffectSpeaker.PlayOneShot(clip);
             return true;
         }
@@ -82,9 +82,10 @@ public class SpeakerSystem : Singleton<SpeakerSystem> {
 
     public bool Bla()
     {
-        if (Time.timeSinceLevelLoad - lastBla > blaRefuseDuration)
+        
+        if (Time.realtimeSinceStartup - lastBla > blaRefuseDuration)
         {
-            lastBla = Time.timeSinceLevelLoad;
+            lastBla = Time.realtimeSinceStartup;
             worldEffectSpeaker.PlayOneShot(blablas[Random.Range(0, blablas.Length)]);
             return true;
         }

@@ -50,6 +50,9 @@ public class HomeIntroScene : MonoBehaviour {
         subTitle.color = subTitleColor;
         yield return new WaitForSeconds(delayIntroText);
         RoomOutro.instance.ShowOutro(ReadyToPlay);
+        title.enabled = false;
+        subTitle.enabled = false;
+        bgField.SetActive(false);
     }
 
     public void ReadyToPlay()
@@ -77,10 +80,6 @@ public class HomeIntroScene : MonoBehaviour {
 
     IEnumerator<WaitForSeconds> LoadNext()
     {
-        yield return new WaitForSeconds(preTitlesRemove);
-        title.enabled = false;
-        subTitle.enabled = false;
-        bgField.SetActive(false);
         yield return new WaitForSeconds(preDoorOpen);
         anim.SetTrigger(doorTrigger);
         yield return new WaitForSeconds(loadDelay);

@@ -668,6 +668,11 @@ Prefab:
         go farther away.\nThere was this ad for an inexpensive trip to the Canary
         Islands... Maybe relaxing by a pool is what I need after all this stress?"
       objectReference: {fileID: 0}
+    - target: {fileID: 114478767595493798, guid: fa55b1e13c96281498c1a17aff53cf70,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa55b1e13c96281498c1a17aff53cf70, type: 2}
   m_IsPrefabParent: 0

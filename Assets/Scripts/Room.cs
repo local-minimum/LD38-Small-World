@@ -50,7 +50,7 @@ public class Room : Singleton<Room> {
     bool otherHappy;
 
     public void Greet() {
-        SpeakerSystem.instance.Bla();
+        StartCoroutine(BlaLoop());
         mouthAnim.SetTrigger(talkTrigger);
         HealthUI.instance.ShowHealthBar();
         otherHappy = true;
@@ -65,7 +65,7 @@ public class Room : Singleton<Room> {
     public void Response(ConversationPiece response)
     {
         SpeakerSystem.instance.FadeToWorld();
-        //SpeakerSystem.instance.Bla();
+        
         mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
@@ -103,10 +103,11 @@ public class Room : Singleton<Room> {
 
     void ConversationCallbackMe()
     {
+        keep_blabla = false;
         otherPiecesThisTurn--;
         ConversationPiece piece = GetPiece();
         mouthAnim.SetTrigger(talkTrigger);
-        SpeakerSystem.instance.Bla();
+        StartCoroutine(BlaLoop());
         if (HealthUI.IsDead)
         {
             DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, DeathCallback);
@@ -171,11 +172,12 @@ public class Room : Singleton<Room> {
     }
     void ConversationCallackOther()
     {
+        keep_blabla = false;
         ProfileViewer.instance.HideProfile();
-        SpeakerSystem.instance.Bla();
+
 
         convoPieces--;
-        if (convoPieces > 0)
+        if (convoPieces >= 0)
         {
             HealthUI.instance.HideHealthBar();
             MiniGameLoader.instance.LoadRandom();
@@ -191,6 +193,18 @@ public class Room : Singleton<Room> {
     void LoadNextRoomScene()
     {
         SceneManager.LoadScene(nextScene);
+    }
+
+    bool keep_blabla;
+
+    IEnumerator<WaitForSeconds> BlaLoop()
+    {
+        keep_blabla = true;
+        while (keep_blabla)
+        {
+            SpeakerSystem.instance.Bla();
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     void Start()

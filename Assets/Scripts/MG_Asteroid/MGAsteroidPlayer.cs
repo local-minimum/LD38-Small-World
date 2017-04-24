@@ -51,8 +51,8 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
         return prefabClone.transform;
     }
 
-    [SerializeField]
-    float distanceToCenter = 0.3f;
+
+    float distanceToCenter = 0.5f;
 
     Vector3 GetConversationoidPos()
     {

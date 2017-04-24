@@ -22,9 +22,15 @@ public class Quitter : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Debug.Log("Good Bye");
-                state = QuitState.Quitting;
-                Application.Quit();
+                if (!allowQuit || Application.isWebPlayer)
+                {
+                    ResumePlay();
+                }
+                else {
+                    Debug.Log("Good Bye");
+                    state = QuitState.Quitting;
+                    Application.Quit();
+                }
 
             } else if (Input.anyKeyDown)
             {
@@ -56,9 +62,14 @@ public class Quitter : MonoBehaviour {
     Color hidingColor;
     Color showingColor;
 
+    bool allowQuit = false;
 
     void Start()
     {
+        if (!allowQuit || Application.isWebPlayer)
+        {
+            GetComponentInChildren<Text>().text = "Press any button to resume...";
+        }
         maskImage = GetComponent<Image>();
         showingColor = maskImage.color;
         hidingColor = maskImage.color;

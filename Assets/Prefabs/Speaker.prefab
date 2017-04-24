@@ -518,3 +518,5 @@ MonoBehaviour:
   - {fileID: 245444673911787754, guid: 44d002808fe461742872c5d98328c6c0, type: 2}
   snapTransition: 0.5
   blaRefuseDuration: 0.3
+  muteSnap:
+  - {fileID: 24500006, guid: 44d002808fe461742872c5d98328c6c0, type: 2}
