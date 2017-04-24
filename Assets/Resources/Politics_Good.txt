@@ -1,4 +1,4 @@
-There is too much taxes on <noun>!
+There is too much taxes on <noun.pl>!
 We need to take a stand against <verb.ing>. Think of the children!
 I think we should raise the taxes on <adj> <noun.pl>.
 I'm voting for the <noun.sg> party. They are really going to <verb> the <noun> back to how it used to be!
