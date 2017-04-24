@@ -50,6 +50,7 @@ public class Room : Singleton<Room> {
     bool otherHappy;
 
     public void Greet() {
+        SpeakerSystem.instance.Bla();
         mouthAnim.SetTrigger(talkTrigger);
         HealthUI.instance.ShowHealthBar();
         otherHappy = true;
@@ -63,6 +64,8 @@ public class Room : Singleton<Room> {
 
     public void Response(ConversationPiece response)
     {
+        SpeakerSystem.instance.FadeToWorld();
+        SpeakerSystem.instance.Bla();
         mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
@@ -86,6 +89,7 @@ public class Room : Singleton<Room> {
 
     public void ResponseSilent()
     {
+        SpeakerSystem.instance.FadeToWorld();
         mouthAnim.SetTrigger(noTalkTrigger);
         MiniGameLoader.instance.UnloadCurrent();
         MiniGameControllerUI.instance.HideAll();
@@ -102,6 +106,7 @@ public class Room : Singleton<Room> {
         otherPiecesThisTurn--;
         ConversationPiece piece = GetPiece();
         mouthAnim.SetTrigger(talkTrigger);
+        SpeakerSystem.instance.Bla();
         if (HealthUI.IsDead)
         {
             DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, DeathCallback);
@@ -167,6 +172,7 @@ public class Room : Singleton<Room> {
     void ConversationCallackOther()
     {
         ProfileViewer.instance.HideProfile();
+        SpeakerSystem.instance.Bla();
 
         convoPieces--;
         if (convoPieces > 0)

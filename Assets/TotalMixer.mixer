@@ -5,11 +5,13 @@ AudioMixerController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MiniGame
+  m_Name: TotalMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 245056174689550110}
+  - {fileID: 245444673911787754}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -20,6 +22,8 @@ AudioMixerController:
     - ac3c93ec395198045943547baba8363d
     - eb2de653e9dfafd4098f3fc6adf7c068
     - 53c972c0efadfff49af786b3e7761683
+    - 62732408c7c78f940bdf61e5b13f194e
+    - 5caca14a39366f544a2adb470c8f1186
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -34,6 +38,8 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 243440090276120098}
   - {fileID: 243389327206079220}
+  - {fileID: 243570601862672844}
+  - {fileID: 243378065122577026}
   m_Volume: cdfe5f7d4e32030458bd0f32ff6de726
   m_Pitch: 4ff566fe1048e784bb880da2fc6c2d0d
   m_Effects:
@@ -64,15 +70,34 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a10820b3e561a43448c6476c60c3a332
   m_FloatValues:
-    5faa84f664e41b44f9239be402ede864: 0.025578512
-    22f4f3d83f76c474e84fbeeb60b1dcf5: -4.1973577
+    319729c3995723a408af9437a74128bd: -14.221897
+    5faa84f664e41b44f9239be402ede864: -30.521746
+    22f4f3d83f76c474e84fbeeb60b1dcf5: -50.103996
+    44b2a21e6c5a7924b88ef8c08dc1e30b: -44.307575
   m_TransitionOverrides: {}
+--- !u!243 &243378065122577026
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: WorldEffects
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 5caca14a39366f544a2adb470c8f1186
+  m_Children: []
+  m_Volume: 44b2a21e6c5a7924b88ef8c08dc1e30b
+  m_Pitch: e1f1c6f827c9cb34fad657466331d227
+  m_Effects:
+  - {fileID: 244980955524444614}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &243389327206079220
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Effects
+  m_Name: MinigameEffects
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 53c972c0efadfff49af786b3e7761683
   m_Children: []
@@ -89,7 +114,7 @@ AudioMixerGroupController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Music
+  m_Name: MinigameMusic
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: eb2de653e9dfafd4098f3fc6adf7c068
   m_Children: []
@@ -97,6 +122,23 @@ AudioMixerGroupController:
   m_Pitch: 14589e8b91a7c3b4daa5af2df9000266
   m_Effects:
   - {fileID: 244618923793417046}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243570601862672844
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: WorldMusic
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 62732408c7c78f940bdf61e5b13f194e
+  m_Children: []
+  m_Volume: 319729c3995723a408af9437a74128bd
+  m_Pitch: ab5fd25236afee245889db8c25dda56c
+  m_Effects:
+  - {fileID: 244823444450201316}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -114,6 +156,19 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244823444450201316
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 77ddb9634aba5844bafc0d59585fc4d5
+  m_EffectName: Attenuation
+  m_MixLevel: 5e882c767ca95a04799fe37693e88b3b
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &244924475738771396
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -127,3 +182,43 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &244980955524444614
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 67524dee433d99547becb22f9e9d580f
+  m_EffectName: Attenuation
+  m_MixLevel: c35acf960de4c62488ad616549f0d8b6
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &245056174689550110
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: InWorld
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: e315898616538ee44b00c057fc9a9e37
+  m_FloatValues:
+    319729c3995723a408af9437a74128bd: -19.928473
+    5faa84f664e41b44f9239be402ede864: -80
+    22f4f3d83f76c474e84fbeeb60b1dcf5: -80
+  m_TransitionOverrides: {}
+--- !u!245 &245444673911787754
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: InMiniGame
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 4ba0dbbe08bbcea47a9ea4b66b70c786
+  m_FloatValues:
+    319729c3995723a408af9437a74128bd: -80
+    5faa84f664e41b44f9239be402ede864: 0.025578514
+    22f4f3d83f76c474e84fbeeb60b1dcf5: -4.653023
+    44b2a21e6c5a7924b88ef8c08dc1e30b: -80
+  m_TransitionOverrides: {}

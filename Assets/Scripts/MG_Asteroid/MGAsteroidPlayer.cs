@@ -71,8 +71,7 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 
     private void SpawnConversationoid(ConversationPiece conversationPiece)
     {
-        Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(m_Conversationoid, transform.position, transform.rotation);
-        prefabClone.transform.position = GetConversationoidPos();
+        Rigidbody2D prefabClone = (Rigidbody2D) Instantiate(m_Conversationoid, GetConversationoidPos(), transform.rotation);        
         prefabClone.transform.SetParent(Asteroids);
         prefabClone.GetComponent<MiniGameConversationObject>().m_ConversationPiece = conversationPiece;
 

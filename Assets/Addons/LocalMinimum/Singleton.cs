@@ -9,6 +9,9 @@ namespace LocalMinimum
 
         static T _instance;
 
+        [SerializeField]
+        bool m_destroyGameObject;
+
         public static T instance
         {
             get
@@ -51,7 +54,13 @@ namespace LocalMinimum
         {
             if (_instance != null && _instance != this)
             {
-                Destroy(this);
+                if (m_destroyGameObject)
+                {
+                    Destroy(gameObject);
+                }
+                else {
+                    Destroy(this);
+                }
             } else
             {
                 _instance = GetComponent<T>();

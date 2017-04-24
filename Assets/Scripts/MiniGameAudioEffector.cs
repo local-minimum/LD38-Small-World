@@ -6,35 +6,33 @@ using LocalMinimum;
 public class MiniGameAudioEffector : Singleton<MiniGameAudioEffector> {
 
     AudioSource speaker;
+    [SerializeField]
+    AudioClip music;
 
     [SerializeField]
     AudioClip[] sounds;
 
     [SerializeField]
-    float refuseDuration = 0.4f;
-
-    float lastEmit = -999f;
+    AudioClip[] selectSounds;
 
     void Start()
     {
         speaker = GetComponent<AudioSource>();
+        SpeakerSystem.instance.FadeToMiniGame(music);
     }
+
+    [SerializeField]
+    float timeBetweenEmits = 0.15f;
 
     public void EmitRandomSound()
     {
-        if (Time.timeSinceLevelLoad - lastEmit > refuseDuration)
-        {
-            lastEmit = Time.timeSinceLevelLoad;
-            speaker.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
-        }
+        SpeakerSystem.instance.PlayMinigameEffect(sounds[Random.Range(0, sounds.Length)], timeBetweenEmits);
     }
 
-    public void EmitSound(AudioClip sound)
+    public void EmitRandomSelectSound()
     {
-        if (Time.timeSinceLevelLoad - lastEmit > refuseDuration)
-        {
-            lastEmit = Time.timeSinceLevelLoad;
-            speaker.PlayOneShot(sound);
-        }
+        SpeakerSystem.instance.PlayMinigameEffect(selectSounds[Random.Range(0, selectSounds.Length)], 0);
     }
+
+
 }
