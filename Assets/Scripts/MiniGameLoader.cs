@@ -103,7 +103,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         while (!ready)
         {
             yield return new WaitForSeconds(0.02f);
-            ready = MiniGamePlayerBase.IsInstanciated && MiniGamePlayerBase.instance.isActiveAndEnabled;
+            ready = MiniGamePlayerBase.IsInstanciated && MiniGamePlayerBase.instance.ReadyToPlay;
         }
         MiniGameCam.instance.SceneCamera.targetTexture = rendTexture;
         MiniGameControllerUI.instance.Show(MiniGamePlayerBase.instance.controllers);

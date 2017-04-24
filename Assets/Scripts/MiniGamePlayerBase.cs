@@ -28,6 +28,17 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
 
     protected ConversationGenerator m_ConvGenerator;
 
+    private bool m_ready = false;
+
+
+    public bool ReadyToPlay
+    {
+        get
+        {
+            return m_ready;
+        }
+    }
+
     private void Start()
     {
         if (Room.IsInstanciated)
@@ -43,6 +54,9 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
         if (autoPlay)
         {
             StartCoroutine(DelayPlay());
+        }
+        else {
+            m_ready = true;
         }
     }
 
