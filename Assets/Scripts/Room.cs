@@ -89,16 +89,33 @@ public class Room : Singleton<Room> {
     void ConversationCallbackMe()
     {
         otherPiecesThisTurn--;
-        if (otherPiecesThisTurn > 0)
+        ConversationPiece piece = GetPiece();
+        if (HealthUI.IsDead)
         {
-
-            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, false, ConversationCallbackMe);
+            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, DeathCallback);
+            StartCoroutine(FadeDeath());
+        }
+        else if (otherPiecesThisTurn > 0)
+        {
+            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, ConversationCallbackMe);
             
         }
         else {
             
-            DialogueDisplayer.instance.ShowDialogue(GetPiece(), _Conversation.currentPerson.icon, false, ConversationCallackOther);
+            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, ConversationCallackOther);
         }
+    }
+
+    IEnumerator<WaitForSeconds> FadeDeath()
+    {
+        yield return new WaitForSeconds(1f);
+        DialogueDisplayer.instance.Continue();
+        MiniGameLoader.instance.LoadDeath();
+    }
+
+    void DeathCallback()
+    {
+
     }
 
     ConversationPiece GetPiece()

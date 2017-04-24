@@ -39,6 +39,14 @@ public class HealthUI : Singleton<HealthUI> {
         }
     }
 
+    public static bool IsDead
+    {
+        get
+        {
+            return Health >= 4;
+        }
+    }
+
     public static void ResetHealth()
     {
         Health = -1;
@@ -51,6 +59,9 @@ public class HealthUI : Singleton<HealthUI> {
         {
             Health = value;
             mouths[value].SetTrigger(talkTrigger);
+        } else
+        {
+            Health = 4;
         }
     }
 
@@ -66,7 +77,7 @@ public class HealthUI : Singleton<HealthUI> {
     {
         int i = 0;
         int value = Health;
-        while (i <= value)
+        while (i <= value && i < 4)
         {
             yield return new WaitForSeconds(delay);
             mouths[i].SetTrigger(talkTrigger);

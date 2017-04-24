@@ -64,10 +64,18 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
             UnloadCurrent();
         }
 
-        roomCamera.GetComponent<AudioListener>().enabled = false;
+        //roomCamera.GetComponent<AudioListener>().enabled = false;
         SceneManager.LoadScene(name, LoadSceneMode.Additive);
         currentMiniGameScene = name;
         StartCoroutine(FadeIn());
+    }
+
+    [SerializeField]
+    string deathScene = "Death";
+
+    public void LoadDeath()
+    {
+        Load(deathScene);
     }
 
     public void LoadRandom()
@@ -93,7 +101,7 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         yield return new WaitForSeconds(easeOutDuration);
         miniGameBG.color = nonLoadedColor;
         miniGame.enabled = false;
-        roomCamera.GetComponent<AudioListener>().enabled = true;
+        //roomCamera.GetComponent<AudioListener>().enabled = true;
 
     }
 
@@ -133,10 +141,5 @@ public class MiniGameLoader : Singleton<MiniGameLoader> {
         miniGame.material.mainTexture = rendTexture;
     }
 
-    IEnumerator<WaitForSeconds> LoadRND()
-    {
-        yield return new WaitForSeconds(2f);
-        LoadRandom();
-    }
     
 }

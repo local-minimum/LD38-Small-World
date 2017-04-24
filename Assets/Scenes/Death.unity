@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 707384360}
   - component: {fileID: 707384359}
   - component: {fileID: 707384358}
-  - component: {fileID: 707384357}
-  - component: {fileID: 707384356}
   - component: {fileID: 707384355}
+  - component: {fileID: 707384356}
+  - component: {fileID: 707384357}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -188,20 +188,32 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   gameOverText: {fileID: 1572477033}
---- !u!81 &707384356
-AudioListener:
+--- !u!114 &707384356
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707384354}
   m_Enabled: 1
---- !u!124 &707384357
-Behaviour:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f863e6bd03203040bc9f3b14f93fa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneCamera: {fileID: 707384359}
+--- !u!114 &707384357
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707384354}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e39d7873f19fb4dbc32bc123b6b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllers: 
+  m_Timeout: 1000
+  autoPlay: 0
 --- !u!92 &707384358
 Behaviour:
   m_ObjectHideFlags: 0
