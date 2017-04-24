@@ -1,4 +1,4 @@
 The weather is <adj-weather> today, isn't it?
 Nice weather, don't you think?
-It's <adj-weather> outside today.
+It sure is <adj-weather> outside today.
 I hate when it is <adj-weather> outside.
