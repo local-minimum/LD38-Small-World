@@ -93,10 +93,10 @@ public class ConversationGenerator : MonoBehaviour {
 				var qualityDict = conversationMap [category];
 				qualityDict.Add (quality, lines);
 
-                
+                /*
 				foreach (var line in lines) {
 					Debug.Log (rant.Do (line));
-				}
+				}*/
 			}
 		}
 	}
