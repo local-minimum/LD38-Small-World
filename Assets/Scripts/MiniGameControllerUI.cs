@@ -34,12 +34,23 @@ public class MiniGameControllerUI : Singleton<MiniGameControllerUI> {
             mouseIcon.SetActive(false);
             keyboardIcon.SetActive(false);
             bothIcon.SetActive(true);
+            bg.SetActive(true);
         }
-        else {
-            mouseIcon.SetActive(controllers.Contains(Controllers.Mouse));
-            keyboardIcon.SetActive(controllers.Contains(Controllers.Keyboard));
+        else if (controllers.Contains(Controllers.Mouse))
+        {
+            mouseIcon.SetActive(true);
+            keyboardIcon.SetActive(false);
             bothIcon.SetActive(false);
+            bg.SetActive(true);
+
         }
-        bg.SetActive(true);
+        else if (controllers.Contains(Controllers.Keyboard))
+        {
+            mouseIcon.SetActive(false);
+            keyboardIcon.SetActive(true);
+            bothIcon.SetActive(false);
+            bg.SetActive(true);
+
+        }
     }
 }
