@@ -54,9 +54,15 @@ public class PersonProfile : MonoBehaviour {
         };
 
         availible = availible.Shuffle(new System.Random(Mathf.RoundToInt(Time.realtimeSinceStartup * 100f)));
-
+        /*
+        Debug.Log("categories " + availible.Count());
+        foreach (var item in availible)
+        {
+            Debug.Log(item);
+        }
+        */
         m_likes = availible.Where((e, i) => i < nLikes).ToList();
-        m_dislikes = availible.Where((e, i) => i >= nLikes).Where((e, i) => i < nDislikes).ToList();
+        m_dislikes = availible.Where((e, i) => i >= nLikes && i < nDislikes + nLikes).ToList();
     }
 
 	public ConversationCategory GetRandomCategory(ConversationQuality quality) {

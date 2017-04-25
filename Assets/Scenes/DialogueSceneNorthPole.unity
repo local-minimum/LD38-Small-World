@@ -1250,7 +1250,7 @@ MonoBehaviour:
     type: 2}
   politicsPrefab: {fileID: 114428474333964876, guid: 92090903cff96324cb5708dc9fae598f,
     type: 2}
-  weatherPrefab: {fileID: 114439828526087258, guid: b9e66c04a5e367544afb5d00982c43d4,
+  weatherPrefab: {fileID: 114785631491004474, guid: 5793bf83732779c42b1dbba37f239bcc,
     type: 2}
   workPrefab: {fileID: 114177644490117580, guid: 5147cb5307ce01c44aef38e1b811414e,
     type: 2}

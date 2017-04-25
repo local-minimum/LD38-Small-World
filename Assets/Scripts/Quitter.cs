@@ -62,7 +62,7 @@ public class Quitter : MonoBehaviour {
     Color hidingColor;
     Color showingColor;
 
-    bool allowQuit = false;
+    bool allowQuit = true;
 
     void Start()
     {
