@@ -1,5 +1,5 @@
-<name-female> <surname> | You met [num: 2; 20] years ago in school.
-<name-female> <surname> | You met [num: 2; 20] years ago when you both worked at the <noun.sg> factory.
+<name-female> <surname> | You met 15 years ago in school.
+<name-female> <surname> | You met 10 years ago when you both worked at the <noun.sg> factory.
 <name-female> <surname> | You used to go <verb.ing> together.
 <name-female> <surname> | A friend of your sister <name-female>.
 <name-female> <surname> | A friend of your ex's, <name>.

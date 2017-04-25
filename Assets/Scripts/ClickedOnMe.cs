@@ -16,7 +16,7 @@ public class ClickedOnMe : MonoBehaviour {
         col = GetComponent<Collider2D>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {

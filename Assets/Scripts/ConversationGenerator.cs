@@ -84,7 +84,10 @@ public class ConversationGenerator : MonoBehaviour {
 				using (StringReader sr = new StringReader(conversations.text)) {
 					string line;
 					while ((line = sr.ReadLine()) != null) {
-						lines.Add (RantProgram.CompileString(line));
+                        if (!string.IsNullOrEmpty(line.Trim()))
+                        {
+                            lines.Add(RantProgram.CompileString(line));
+                        }
 					}
 				}
 				if (!conversationMap.ContainsKey (category)) {
@@ -95,14 +98,13 @@ public class ConversationGenerator : MonoBehaviour {
 
                 /*
 				foreach (var line in lines) {
+                    Debug.Log(string.Format("{0} {1}, TEMPLATE: '{2}'", category, quality, line.Code));
 					Debug.Log (rant.Do (line));
-				}*/
+				}
+                */
 			}
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }
