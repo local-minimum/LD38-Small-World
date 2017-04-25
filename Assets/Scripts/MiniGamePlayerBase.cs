@@ -26,8 +26,6 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
     [SerializeField]
     bool autoPlay = false;
 
-    protected ConversationGenerator m_ConvGenerator;
-
     private bool m_ready = false;
 
 
@@ -41,15 +39,6 @@ public abstract class MiniGamePlayerBase : Singleton<MiniGamePlayerBase> {
 
     private void Start()
     {
-        if (Room.IsInstanciated)
-        {
-            m_ConvGenerator = Room.instance.Conversation;
-        }
-
-        if (m_ConvGenerator == null)
-        {
-            m_ConvGenerator = GetComponent<ConversationGenerator>();
-        }
 
         if (autoPlay)
         {

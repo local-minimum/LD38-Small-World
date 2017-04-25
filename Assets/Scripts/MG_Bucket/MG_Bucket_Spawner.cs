@@ -57,7 +57,8 @@ public class MG_Bucket_Spawner : MiniGamePlayerBase {
 
     public override void Play(int difficulty)
     {
-        Debug.Log("Play " + m_ConvGenerator);
+        ConversationGenerator m_ConvGenerator = ConversationGenerator.instance;
+        
         int goodConvCount = 2;
         int badConvCount = 8;
 

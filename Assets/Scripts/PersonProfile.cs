@@ -72,7 +72,6 @@ public class PersonProfile : MonoBehaviour {
     string nameHistory;
     string _name;
     string _history;
-    string _firstName;
 
     public string FullName
     {
@@ -84,18 +83,6 @@ public class PersonProfile : MonoBehaviour {
         }
     }
 
-    public string FirstName
-    {
-        get
-        {
-            if (string.IsNullOrEmpty(_firstName))
-            {
-                LoadNameHistory();
-            }
-
-            return _firstName;
-        }
-    }
 
     public string CommonHistory {
 
@@ -111,7 +98,7 @@ public class PersonProfile : MonoBehaviour {
 
     void LoadNameHistory()
     {
-        nameHistory = Room.instance.Conversation.GenerateConversation(ConversationCategory.History, genderEncoding).Text;
+        nameHistory = ConversationGenerator.instance.GenerateConversation(ConversationCategory.History, genderEncoding).Text;
         string[] values = nameHistory.Split('|').Select(e => e.Trim()).Take(2).ToArray();
         _name = values[0];
         _history = values[1];

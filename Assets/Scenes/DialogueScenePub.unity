@@ -1674,7 +1674,8 @@ Prefab:
       propertyPath: delayBeforeProfile
       value: 3.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114041661722775618, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e2c7edf9834ee5d4bb70c5b6ba8a2ac1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2021431866

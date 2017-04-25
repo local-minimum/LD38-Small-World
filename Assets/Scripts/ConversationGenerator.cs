@@ -5,11 +5,17 @@ using Rant;
 using Rant.Resources;
 using System.IO;
 using System;
+using LocalMinimum;
 
-public class ConversationGenerator : MonoBehaviour {
+public class ConversationGenerator : Singleton<ConversationGenerator> {
 
-	[SerializeField]
-	public PersonProfile currentPerson;
+	PersonProfile currentPerson
+    {
+        get
+        {
+            return Room.instance.Frenemy;
+        }
+    }
 
 	private RantEngine rant;
 
@@ -69,7 +75,8 @@ public class ConversationGenerator : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {		
+    void Start () {
+        DontDestroyOnLoad(gameObject);
 		rant = new RantEngine();
 		var asset = Resources.Load("Rantionary-3.0.17") as TextAsset;
 		var stream = new MemoryStream(asset.bytes);

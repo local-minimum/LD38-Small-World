@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 public class Room : Singleton<Room> {
 
     [SerializeField]
-    ConversationGenerator _Conversation;
-
-    [SerializeField]
     ConversationPiece silentResponse;
 
     [SerializeField]
@@ -18,18 +15,28 @@ public class Room : Singleton<Room> {
     [SerializeField]
     int difficultyLvl = 1;
 
+    PersonProfile m_personProfile;
+
+    public PersonProfile Frenemy {
+
+        get {
+            if (m_personProfile == null)
+            {
+                m_personProfile = GetComponent<PersonProfile>();
+            }
+            if (m_personProfile == null)
+            {
+                m_personProfile = gameObject.AddComponent<PersonProfile>();
+            }
+            return m_personProfile;
+        }
+    }
+
     public int Difficulty
     {
         get
         {
             return difficultyLvl;
-        }
-    }
-
-    public ConversationGenerator Conversation
-    {
-        get {
-            return _Conversation;
         }
     }
 
@@ -55,7 +62,7 @@ public class Room : Singleton<Room> {
         HealthUI.instance.ShowHealthBar();
         otherHappy = true;
         frenemyCat = ConversationCategory.Greeting;
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Greeting), _Conversation.currentPerson.icon, false, ConversationCallbackMe);
+        DialogueDisplayer.instance.ShowDialogue(ConversationGenerator.instance.GenerateConversation(ConversationCategory.Greeting), Frenemy.icon, false, ConversationCallbackMe);
 
     }
 
@@ -71,11 +78,11 @@ public class Room : Singleton<Room> {
         MiniGameControllerUI.instance.HideAll();
         HealthUI.instance.ShowHealthBar();
         playerCat = response.Category;
-        if (_Conversation.currentPerson.likes.Contains(response.Category))
+        if (Frenemy.likes.Contains(response.Category))
         {
             otherHappy = true;
             otherPiecesThisTurn = 1;
-        } else if (_Conversation.currentPerson.dislikes.Contains(response.Category))
+        } else if (Frenemy.dislikes.Contains(response.Category))
         {
             if (otherHappy)
             {
@@ -98,7 +105,7 @@ public class Room : Singleton<Room> {
         playerCat = ConversationCategory.Silent;
         difficultyLvl++;
         otherPiecesThisTurn = Random.Range(2, 5);
-        DialogueDisplayer.instance.ShowDialogue(_Conversation.GenerateConversation(ConversationCategory.Silent), selfIcon, true, ConversationCallbackMe);
+        DialogueDisplayer.instance.ShowDialogue(ConversationGenerator.instance.GenerateConversation(ConversationCategory.Silent), selfIcon, true, ConversationCallbackMe);
     }
 
     void ConversationCallbackMe()
@@ -110,17 +117,17 @@ public class Room : Singleton<Room> {
         StartCoroutine(BlaLoop());
         if (HealthUI.IsDead)
         {
-            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, DeathCallback);
+            DialogueDisplayer.instance.ShowDialogue(piece, Frenemy.icon, false, DeathCallback);
             StartCoroutine(FadeDeath());
         }
         else if (otherPiecesThisTurn > 0)
         {
-            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, ConversationCallbackMe);
+            DialogueDisplayer.instance.ShowDialogue(piece, Frenemy.icon, false, ConversationCallbackMe);
             
         }
         else {
             
-            DialogueDisplayer.instance.ShowDialogue(piece, _Conversation.currentPerson.icon, false, ConversationCallackOther);
+            DialogueDisplayer.instance.ShowDialogue(piece, Frenemy.icon, false, ConversationCallackOther);
         }
     }
 
@@ -144,13 +151,13 @@ public class Room : Singleton<Room> {
             if (playerCat == ConversationCategory.Silent)
             {
                 Debug.Log("Player Silent, Other Unhappy");
-                piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
+                piece = ConversationGenerator.instance.GenerateConversation(frenemyCat, ConversationQuality.Good);
                 playerCat = frenemyCat;
             }
             else
             {
                 Debug.Log("Player " + playerCat + ", Other Unhappy");
-                piece = _Conversation.GenerateConversation(playerCat, ConversationQuality.Bad);
+                piece = ConversationGenerator.instance.GenerateConversation(playerCat, ConversationQuality.Bad);
                 frenemyCat = ConversationCategory.Silent;
             }
             HealthUI.instance.Increase();
@@ -159,12 +166,12 @@ public class Room : Singleton<Room> {
         else if (playerCat == frenemyCat)
         {
             Debug.Log("Player and Frenemy " + frenemyCat);
-            piece = _Conversation.GenerateConversation(frenemyCat, ConversationQuality.Good);
+            piece = ConversationGenerator.instance.GenerateConversation(frenemyCat, ConversationQuality.Good);
         }
         else
         {
             Debug.Log("Frenemy select new topic");
-            piece = _Conversation.GenerateConversation(ConversationQuality.Good);
+            piece = ConversationGenerator.instance.GenerateConversation(ConversationQuality.Good);
             frenemyCat = piece.Category;
         }
         
@@ -224,7 +231,7 @@ public class Room : Singleton<Room> {
     IEnumerator<WaitForSeconds> DelayConvo()
     {
         yield return new WaitForSeconds(delayBeforeProfile);
-        ProfileViewer.instance.ShowProfile(_Conversation.currentPerson);
+        ProfileViewer.instance.ShowProfile(Frenemy);
         yield return new WaitForSeconds(delayBeforeGreet);
         Greet();
         yield return new WaitForSeconds(delayBeforeHide);

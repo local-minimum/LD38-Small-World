@@ -14,7 +14,7 @@ public class ReshowProfile : MonoBehaviour {
 
         if (!manualShowing && !ProfileViewer.instance.ShowingProfile)
         {
-            ProfileViewer.instance.ShowProfile(Room.instance.Conversation.currentPerson);
+            ProfileViewer.instance.ShowProfile(Room.instance.Frenemy);
             StartCoroutine(DelayClose());
         }
     }

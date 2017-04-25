@@ -11,6 +11,7 @@ public class MGAsteroidPlayer : MiniGamePlayerBase
 
     override public void Play(int difficulty)
     {
+        ConversationGenerator m_ConvGenerator = ConversationGenerator.instance;
         int goodConvCount = 2;
         int badConvCount = 5;
                 

@@ -28,7 +28,7 @@ public class DialogueDisplayer : Singleton<DialogueDisplayer> {
 
     public void ShowDialogue(ConversationPiece piece, Sprite icon, bool isPlayer, Action callback)
     {
-        nameField.text = isPlayer ? "YOU:" : Room.instance.Conversation.currentPerson.FullName + ":";
+        nameField.text = isPlayer ? "YOU:" : Room.instance.Frenemy.FullName + ":";
 
         iconImage.sprite = icon;
         dialogueText.text = piece.Text;

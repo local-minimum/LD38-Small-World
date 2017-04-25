@@ -5,7 +5,6 @@ using LocalMinimum;
 
 public class MiniGameAudioEffector : Singleton<MiniGameAudioEffector> {
 
-    AudioSource speaker;
     [SerializeField]
     AudioClip music;
 
@@ -17,7 +16,7 @@ public class MiniGameAudioEffector : Singleton<MiniGameAudioEffector> {
 
     void Start()
     {
-        speaker = GetComponent<AudioSource>();
+
         SpeakerSystem.instance.FadeToMiniGame(music);
     }
 
